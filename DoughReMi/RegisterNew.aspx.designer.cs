@@ -69,13 +69,13 @@ namespace DoughReMi
         protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
-        /// emailRequired control.
+        /// emailValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator emailRequired;
+        protected global::System.Web.UI.WebControls.CustomValidator emailValidator;
 
         /// <summary>
         /// gender control.
@@ -105,6 +105,15 @@ namespace DoughReMi
         protected global::System.Web.UI.WebControls.RequiredFieldValidator usernameRequired;
 
         /// <summary>
+        /// usernameValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator usernameValidator;
+
+        /// <summary>
         /// password control.
         /// </summary>
         /// <remarks>
@@ -114,13 +123,13 @@ namespace DoughReMi
         protected global::System.Web.UI.WebControls.TextBox password;
 
         /// <summary>
-        /// passwordRequired control.
+        /// passwordValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator passwordRequired;
+        protected global::System.Web.UI.WebControls.CustomValidator passwordValidator;
 
         /// <summary>
         /// Register control.

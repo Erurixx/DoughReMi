@@ -1,0 +1,30 @@
+﻿body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: #F9F9F9;
+}
+
+.full-page {
+    padding: 60px 30px;
+}
+
+.terms-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+    .terms-text h2 {
+        text-transform: uppercase;
+        color: #D5B60A;
+    }
+
+    .terms-text p {
+        margin-bottom: 1em;
+    }
+
+        .terms-text p::first-line {
+            font-weight: bold;
+        }
