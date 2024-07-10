@@ -38,9 +38,7 @@
                 <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" CssClass="btn btn-primary" OnClick="btnChangePassword_Click" />
             </div>
 
-            <!-- Back Button -->
-            <div class="form-group">
-            </div>
+            
         </div>
     </form>
 </body>
