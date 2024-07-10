@@ -106,14 +106,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AdminQuizAdd.aspx" />
+    <Content Include="AdminQuizAdd.css" />
+    <Content Include="AdminQuizDashboard.aspx" />
+    <Content Include="AdminQuizDashboard.css" />
+    <Content Include="AdminQuizEdit.aspx" />
+    <Content Include="AdminQuizEdit.css" />
     <Content Include="App_Data\Register.mdf" />
     <Content Include="App_Data\Register_log.ldf">
       <DependentUpon>Register.mdf</DependentUpon>
     </Content>
-    <Content Include="Assignment\AdminQuizAdd.aspx" />
-    <Content Include="Assignment\AdminQuizAdd.css" />
-    <Content Include="Assignment\AdminQuizDashboard.aspx" />
-    <Content Include="Assignment\AdminQuizDashboard.css" />
     <Content Include="Change Password.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -121,7 +123,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="dbConnection.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -176,11 +177,13 @@
     <Content Include="Main Page After Logged In.js" />
     <Content Include="User Profile.aspx" />
     <Content Include="User Profile New.css" />
+    <Content Include="UserQuizAttempt.aspx" />
+    <Content Include="UserQuizDashboard.aspx" />
+    <Content Include="UserQuizDashboard.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="web.config" />
-    <Content Include="WAPPAssignment.csproj" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -189,6 +192,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminQuizAdd.aspx.cs">
+      <DependentUpon>AdminQuizAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminQuizAdd.aspx.designer.cs">
+      <DependentUpon>AdminQuizAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminQuizDashboard.aspx.cs">
+      <DependentUpon>AdminQuizDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminQuizDashboard.aspx.designer.cs">
+      <DependentUpon>AdminQuizDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminQuizEdit.aspx.cs">
+      <DependentUpon>AdminQuizEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminQuizEdit.aspx.designer.cs">
+      <DependentUpon>AdminQuizEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -198,20 +219,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Assignment\AdminQuizAdd.aspx.cs">
-      <DependentUpon>AdminQuizAdd.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Assignment\AdminQuizAdd.aspx.designer.cs">
-      <DependentUpon>AdminQuizAdd.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Assignment\AdminQuizDashboard.aspx.cs">
-      <DependentUpon>AdminQuizDashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Assignment\AdminQuizDashboard.aspx.designer.cs">
-      <DependentUpon>AdminQuizDashboard.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Change Password.aspx.cs">
       <DependentUpon>Change Password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -225,13 +232,6 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="dbConnection.aspx.cs">
-      <DependentUpon>dbConnection.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="dbConnection.aspx.designer.cs">
-      <DependentUpon>dbConnection.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -292,6 +292,18 @@
     </Compile>
     <Compile Include="User Profile.aspx.designer.cs">
       <DependentUpon>User Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserQuizAttempt.aspx.cs">
+      <DependentUpon>UserQuizAttempt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserQuizAttempt.aspx.designer.cs">
+      <DependentUpon>UserQuizAttempt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserQuizDashboard.aspx.cs">
+      <DependentUpon>UserQuizDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserQuizDashboard.aspx.designer.cs">
+      <DependentUpon>UserQuizDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

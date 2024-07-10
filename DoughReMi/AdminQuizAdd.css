@@ -1,36 +1,8 @@
-﻿/* Body styles */
-body {
+﻿body {
     font-family: Arial, sans-serif;
     background-color: white;
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
-    padding: 0 2rem;
-}
 
-.topnav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
-    list-style: none;
-    font-size: 1rem;
-    flex: 1;
-}
-
-    .topnav a {
-        text-decoration: none;
-        color: black;
-    }
-
-        .topnav a:hover {
-            color: #E8D10D;
-            transition: background-color 0.3s, color 0.3s;
-        }
-/* Form container */
 .form-container {
     max-width: 1000px;
     margin: 50px auto;
@@ -40,7 +12,6 @@ nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-    /* Form elements */
     .form-container input[type="text"],
     .form-container input[type="password"],
     .form-container select,
@@ -61,7 +32,6 @@ nav {
         background: url('arrow-down.png') no-repeat right;
     }
 
-    /* Button styles */
     .form-container input[type="submit"],
     .form-container input[type="button"],
     .form-container button {
@@ -74,13 +44,6 @@ nav {
         font-size: 16px;
     }
 
-        .form-container input[type="submit"]:hover,
-        .form-container input[type="button"]:hover,
-        .form-container button:hover {
-            background-color: #45a049;
-        }
-
-/* Alert message */
 .alert {
     padding: 20px;
     background-color: #4CAF50;

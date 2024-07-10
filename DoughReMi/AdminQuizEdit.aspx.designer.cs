@@ -11,7 +11,7 @@ namespace WAPP_Assignment.Assignment
 {
 
 
-    public partial class AdminQuizAdd
+    public partial class AdminQuizEdit
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Label1 control.
+        /// Label21 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label Label21;
 
         /// <summary>
         /// title control.
@@ -39,16 +39,16 @@ namespace WAPP_Assignment.Assignment
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox title;
+        protected global::System.Web.UI.WebControls.Label title;
 
         /// <summary>
-        /// Label2 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// difficulty control.
@@ -60,13 +60,13 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.DropDownList difficulty;
 
         /// <summary>
-        /// Label3 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
         /// question1 control.
@@ -78,13 +78,22 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox question1;
 
         /// <summary>
-        /// Label4 control.
+        /// rfvQuestion1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvQuestion1;
+
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
         /// Label6 control.
@@ -105,6 +114,15 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceAq1;
 
         /// <summary>
+        /// rfvChoiceAq1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceAq1;
+
+        /// <summary>
         /// Label7 control.
         /// </summary>
         /// <remarks>
@@ -121,6 +139,15 @@ namespace WAPP_Assignment.Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox choiceBq1;
+
+        /// <summary>
+        /// rfvChoiceBq1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceBq1;
 
         /// <summary>
         /// Label8 control.
@@ -141,6 +168,15 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceCq1;
 
         /// <summary>
+        /// rfvChoiceCq1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceCq1;
+
+        /// <summary>
         /// Label9 control.
         /// </summary>
         /// <remarks>
@@ -159,13 +195,22 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceDq1;
 
         /// <summary>
-        /// Label5 control.
+        /// rfvChoiceDq1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceDq1;
+
+        /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
         /// ansQ1 control.
@@ -174,16 +219,16 @@ namespace WAPP_Assignment.Assignment
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ansQ1;
+        protected global::System.Web.UI.WebControls.DropDownList ansQ1;
 
         /// <summary>
-        /// Label10 control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
         /// question2 control.
@@ -195,13 +240,22 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox question2;
 
         /// <summary>
-        /// Label11 control.
+        /// rfvQuestion2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvQuestion2;
+
+        /// <summary>
+        /// Label10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label10;
 
         /// <summary>
         /// Label22 control.
@@ -222,6 +276,15 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceAq2;
 
         /// <summary>
+        /// rfvChoiceAq2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceAq2;
+
+        /// <summary>
         /// Label23 control.
         /// </summary>
         /// <remarks>
@@ -238,6 +301,15 @@ namespace WAPP_Assignment.Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox choiceBq2;
+
+        /// <summary>
+        /// rfvChoiceBq2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceBq2;
 
         /// <summary>
         /// Label24 control.
@@ -258,6 +330,15 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceCq2;
 
         /// <summary>
+        /// rfvChoiceCq2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceCq2;
+
+        /// <summary>
         /// Label25 control.
         /// </summary>
         /// <remarks>
@@ -276,13 +357,22 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceDq2;
 
         /// <summary>
-        /// Label12 control.
+        /// rfvChoiceDq2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceDq2;
+
+        /// <summary>
+        /// Label11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label11;
 
         /// <summary>
         /// ansQ2 control.
@@ -291,16 +381,16 @@ namespace WAPP_Assignment.Assignment
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ansQ2;
+        protected global::System.Web.UI.WebControls.DropDownList ansQ2;
 
         /// <summary>
-        /// Label13 control.
+        /// Label12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
+        protected global::System.Web.UI.WebControls.Label Label12;
 
         /// <summary>
         /// question3 control.
@@ -312,13 +402,22 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox question3;
 
         /// <summary>
-        /// Label14 control.
+        /// rfvQuestion3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvQuestion3;
+
+        /// <summary>
+        /// Label13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
         /// Label26 control.
@@ -339,6 +438,15 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceAq3;
 
         /// <summary>
+        /// rfvChoiceAq3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceAq3;
+
+        /// <summary>
         /// Label27 control.
         /// </summary>
         /// <remarks>
@@ -355,6 +463,15 @@ namespace WAPP_Assignment.Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox choiceBq3;
+
+        /// <summary>
+        /// rfvChoiceBq3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceBq3;
 
         /// <summary>
         /// Label28 control.
@@ -375,6 +492,15 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceCq3;
 
         /// <summary>
+        /// rfvChoiceCq3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceCq3;
+
+        /// <summary>
         /// Label29 control.
         /// </summary>
         /// <remarks>
@@ -393,13 +519,22 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceDq3;
 
         /// <summary>
-        /// Label15 control.
+        /// rfvChoiceDq3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label15;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceDq3;
+
+        /// <summary>
+        /// Label14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label14;
 
         /// <summary>
         /// ansQ3 control.
@@ -408,16 +543,16 @@ namespace WAPP_Assignment.Assignment
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ansQ3;
+        protected global::System.Web.UI.WebControls.DropDownList ansQ3;
 
         /// <summary>
-        /// Label16 control.
+        /// Label15 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label16;
+        protected global::System.Web.UI.WebControls.Label Label15;
 
         /// <summary>
         /// question4 control.
@@ -429,13 +564,22 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox question4;
 
         /// <summary>
-        /// Label17 control.
+        /// rfvQuestion4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label17;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvQuestion4;
+
+        /// <summary>
+        /// Label16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label16;
 
         /// <summary>
         /// Label30 control.
@@ -456,6 +600,15 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceAq4;
 
         /// <summary>
+        /// rfvChoiceAq4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceAq4;
+
+        /// <summary>
         /// Label31 control.
         /// </summary>
         /// <remarks>
@@ -472,6 +625,15 @@ namespace WAPP_Assignment.Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox choiceBq4;
+
+        /// <summary>
+        /// rfvChoiceBq4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceBq4;
 
         /// <summary>
         /// Label32 control.
@@ -492,6 +654,15 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceCq4;
 
         /// <summary>
+        /// rfvChoiceCq4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceCq4;
+
+        /// <summary>
         /// Label33 control.
         /// </summary>
         /// <remarks>
@@ -510,13 +681,22 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceDq4;
 
         /// <summary>
-        /// Label18 control.
+        /// rfvChoiceDq4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label18;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceDq4;
+
+        /// <summary>
+        /// Label17 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label17;
 
         /// <summary>
         /// ansQ4 control.
@@ -525,16 +705,16 @@ namespace WAPP_Assignment.Assignment
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ansQ4;
+        protected global::System.Web.UI.WebControls.DropDownList ansQ4;
 
         /// <summary>
-        /// Label19 control.
+        /// Label18 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label19;
+        protected global::System.Web.UI.WebControls.Label Label18;
 
         /// <summary>
         /// question5 control.
@@ -546,13 +726,22 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox question5;
 
         /// <summary>
-        /// Label20 control.
+        /// rfvQuestion5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label20;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvQuestion5;
+
+        /// <summary>
+        /// Label19 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label19;
 
         /// <summary>
         /// Label34 control.
@@ -573,6 +762,15 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceAq5;
 
         /// <summary>
+        /// rfvChoiceAq5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceAq5;
+
+        /// <summary>
         /// Label35 control.
         /// </summary>
         /// <remarks>
@@ -589,6 +787,15 @@ namespace WAPP_Assignment.Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox choiceBq5;
+
+        /// <summary>
+        /// rfvChoiceBq5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceBq5;
 
         /// <summary>
         /// Label36 control.
@@ -609,6 +816,15 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceCq5;
 
         /// <summary>
+        /// rfvChoiceCq5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceCq5;
+
+        /// <summary>
         /// Label37 control.
         /// </summary>
         /// <remarks>
@@ -627,13 +843,22 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.TextBox choiceDq5;
 
         /// <summary>
-        /// Label21 control.
+        /// rfvChoiceDq5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label21;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvChoiceDq5;
+
+        /// <summary>
+        /// Label20 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label20;
 
         /// <summary>
         /// ansQ5 control.
@@ -642,24 +867,24 @@ namespace WAPP_Assignment.Assignment
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ansQ5;
+        protected global::System.Web.UI.WebControls.DropDownList ansQ5;
 
         /// <summary>
-        /// cancel control.
+        /// Cancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cancel;
+        protected global::System.Web.UI.WebControls.Button Cancel;
 
         /// <summary>
-        /// Add control.
+        /// Update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Add;
+        protected global::System.Web.UI.WebControls.Button Update;
     }
 }

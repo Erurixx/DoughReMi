@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WAPP_Assignment.Assignment
 {
-    public partial class AdminQuizDashboard : Page
+    public partial class UserQuizDashboard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,40 +33,13 @@ namespace WAPP_Assignment.Assignment
             }
         }
 
-        protected void btnAddQuiz_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminQuizAdd.aspx");
-        }
-
-        protected void btnEdit_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminEditQuiz.aspx");
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
+        protected void Attempt_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             string quizTitle = btn.CommandArgument;
-
-            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "DELETE FROM Quizzes_Add WHERE title = @title";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@title", quizTitle);
-
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                }
-            }
-
-            LoadQuizzes();
-
-            string script = "alert('Delete successful!');";
-            ScriptManager.RegisterStartupScript(this, GetType(), "DeleteAlert", script, true);
+            Response.Redirect("UserQuizAttempt.aspx?title=" + quizTitle);
         }
+
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
