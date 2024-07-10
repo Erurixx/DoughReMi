@@ -1,0 +1,95 @@
+﻿/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+    font-size: 1rem;
+    flex: 1;
+}
+
+    .topnav a {
+        text-decoration: none;
+        color: black;
+    }
+
+        .topnav a:hover {
+            color: #E8D10D;
+            transition: background-color 0.3s, color 0.3s;
+        }
+/* Form container */
+.form-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    /* Form elements */
+    .form-container input[type="text"],
+    .form-container input[type="password"],
+    .form-container select,
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    .form-container select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding-right: 30px;
+        background: url('arrow-down.png') no-repeat right;
+    }
+
+    /* Button styles */
+    .form-container input[type="submit"],
+    .form-container input[type="button"],
+    .form-container button {
+        background-color: #fde047;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .form-container input[type="submit"]:hover,
+        .form-container input[type="button"]:hover,
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+/* Alert message */
+.alert {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    display: none; /* Initially hidden */
+}
+
+    .alert.show {
+        display: block; /* Show when needed */
+    }

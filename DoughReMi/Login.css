@@ -1,0 +1,102 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: #F9F9F9;
+    
+    
+}
+.mb-4 {
+    font-size: 1.5rem;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 4rem;
+    margin-left: 17rem;
+    
+}
+.form-control::placeholder {
+    color: #E8E8E8;
+}
+.wrap {
+    background: #fefce8;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+}
+
+.img {
+    width: 50%;
+}
+
+.login-wrap {
+    padding: 4rem;
+    width: 50%;
+}
+
+
+.text-danger {
+    
+    color: #dc3545;
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.form-control {
+    margin-top:0.5rem;
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-bottom: 0.3rem;
+        
+}
+#SignInButton {
+    background-color: #fde047;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom:1.5rem;
+}
+
+#SignInButton:hover {
+    color: black;
+    background-color: #FFEF64;
+    
+}
+.text-center {
+    text-align: center;
+}
+
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}

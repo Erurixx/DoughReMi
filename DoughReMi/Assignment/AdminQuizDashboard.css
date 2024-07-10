@@ -1,0 +1,36 @@
+﻿.form-container {
+    margin: 20px;
+}
+
+.quiz-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .quiz-table th, .quiz-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .quiz-table th {
+        background-color: #fde047;
+        color: white;
+    }
+
+.btn {
+    background-color: #fde047;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+    .btn:hover {
+        background-color: #45a049;
+    }

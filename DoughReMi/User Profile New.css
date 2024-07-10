@@ -1,0 +1,140 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F9F9F9;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+/* Container */
+.container {
+    margin-top: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+    .form-control:focus {
+        border-color: #fde047;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(253, 224, 71, 0.25);
+    }
+
+/* Profile Picture */
+.text-center {
+    text-align: center;
+}
+
+.img-thumbnail {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.avatar-help {
+    display: block;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+/* Button */
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #fde047;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #FFEF64;
+    }
+
+/* Dropdown */
+label[for="gender"] {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.dropbutton {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+    .dropbutton:focus {
+        border-color: #fde047;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(253, 224, 71, 0.25);
+    }
+
+    .dropbutton option {
+        padding: 0.75rem;
+    }
+
+/* Helper Classes */
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
