@@ -175,6 +175,8 @@
     <Content Include="Site.Master" />
     <Content Include="MPAL New.css" />
     <Content Include="Main Page After Logged In.js" />
+    <Content Include="Terms and Condition.aspx" />
+    <Content Include="terms and condition.css" />
     <Content Include="User Profile.aspx" />
     <Content Include="User Profile New.css" />
     <Content Include="UserQuizAttempt.aspx" />
@@ -194,18 +196,21 @@
   <ItemGroup>
     <Compile Include="AdminQuizAdd.aspx.cs">
       <DependentUpon>AdminQuizAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminQuizAdd.aspx.designer.cs">
       <DependentUpon>AdminQuizAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminQuizDashboard.aspx.cs">
       <DependentUpon>AdminQuizDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminQuizDashboard.aspx.designer.cs">
       <DependentUpon>AdminQuizDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminQuizEdit.aspx.cs">
       <DependentUpon>AdminQuizEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminQuizEdit.aspx.designer.cs">
       <DependentUpon>AdminQuizEdit.aspx</DependentUpon>
@@ -286,6 +291,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Terms and Condition.aspx.cs">
+      <DependentUpon>Terms and Condition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terms and Condition.aspx.designer.cs">
+      <DependentUpon>Terms and Condition.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User Profile.aspx.cs">
       <DependentUpon>User Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -295,12 +307,14 @@
     </Compile>
     <Compile Include="UserQuizAttempt.aspx.cs">
       <DependentUpon>UserQuizAttempt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserQuizAttempt.aspx.designer.cs">
       <DependentUpon>UserQuizAttempt.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserQuizDashboard.aspx.cs">
       <DependentUpon>UserQuizDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserQuizDashboard.aspx.designer.cs">
       <DependentUpon>UserQuizDashboard.aspx</DependentUpon>

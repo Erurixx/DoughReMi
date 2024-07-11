@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <label for="userEmail">Email</label>
                             <asp:TextBox ID="email" runat="server" CssClass="form-control" required="true"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="emailRequired" runat="server" ControlToValidate="email" ErrorMessage="Email is required" CssClass="text-danger" />
+                            <asp:CustomValidator ID="emailValidator" runat="server" ControlToValidate="email" ErrorMessage="Email is required and must be in a valid format" CssClass="text-danger" OnServerValidate="ValidateEmail" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <label for="gender">Gender</label>
@@ -49,11 +49,12 @@
                             <label for="userName">Username</label>
                             <asp:TextBox ID="username" runat="server" CssClass="form-control" Placeholder="Please Enter Your Username" required="true"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="usernameRequired" runat="server" ControlToValidate="username" ErrorMessage="Username is required" CssClass="text-danger" />
+                            <asp:CustomValidator ID="usernameValidator" runat="server" ControlToValidate="username" ErrorMessage="Username is required" CssClass="text-danger" OnServerValidate="ValidateRequiredField" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <label for="passWord">Password</label>
                             <asp:TextBox ID="password" runat="server" CssClass="form-control" TextMode="Password" Placeholder="Please Enter Your Password" required="true"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="passwordRequired" runat="server" ControlToValidate="password" ErrorMessage="Password is required" CssClass="text-danger" />
+                            <asp:CustomValidator ID="passwordValidator" runat="server" ControlToValidate="password" ErrorMessage="Password is required and must be at least 8 characters long, containing at least one uppercase letter, one number, and one special character" CssClass="text-danger" OnServerValidate="ValidatePassword" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Button ID="Register" runat="server" CssClass="form-control btn btn-primary rounded submit" Text="Register" OnClick="RegisterButton_Click" />
