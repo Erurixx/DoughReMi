@@ -19,8 +19,8 @@
                     <div class="login-wrap">
                         <h3 class="mb-4">Welcome Back!</h3>
                         <div class="form-group">
-                            <label for="username">Username</label>
-                            <asp:TextBox ID="username" runat="server" CssClass="form-control" Placeholder="Please Enter Your Username" required="true"></asp:TextBox>
+                            <label for="username">Email or Username</label>
+                            <asp:TextBox ID="username" runat="server" CssClass="form-control" Placeholder="Please Enter Your Email or Username" required="true"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="usernameRequired" runat="server" ControlToValidate="username" ErrorMessage="Username is required" CssClass="text-danger" />
                         </div>
                         <div class="form-group">
