@@ -1,0 +1,62 @@
+﻿/* Admin Dashboard Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F9F9F9;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    padding: 20px;
+}
+
+.admin-container {
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
+/* GridView Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #fde047; /* Change this to your desired color */
+    color: black;
+}
+
+
+
+/* Search Styles */
+.search-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

@@ -28,23 +28,30 @@ namespace DoughReMi
                 {
                     con.Open();
 
-                    // Check if the username and password match
-                    string checkUserQuery = "SELECT COUNT(*) FROM Register WHERE userName = @userName AND password = @password";
+                    // Check if the username or email and password match
+                    string checkUserQuery = "SELECT email FROM Register WHERE (userName = @userNameOrEmail OR email = @userNameOrEmail) AND password = @password";
                     SqlCommand cmd = new SqlCommand(checkUserQuery, con);
-                    cmd.Parameters.AddWithValue("@userName", username.Text);
+                    cmd.Parameters.AddWithValue("@userNameOrEmail", username.Text);
                     cmd.Parameters.AddWithValue("@password", password.Text);
-                    int userCount = (int)cmd.ExecuteScalar();
 
-                    if (userCount == 1)
+                    string email = (string)cmd.ExecuteScalar();
+
+                    if (!string.IsNullOrEmpty(email))
                     {
-                        // Store the username in the session
-                        Session["storeUsername"] = username.Text; 
+                        // Store the username or email in the session
+                        Session["storeUsername"] = username.Text;
 
-                        
-
-
-                        // Login successful
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Login successful!');window.location ='Main Page After Logged In.aspx';", true);
+                        // Check if the email ends with @admin.com
+                        if (email.EndsWith("@admin.com"))
+                        {
+                            // Redirect to admin dashboard
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Login successful!');window.location ='Admin Main Page.aspx';", true);
+                        }
+                        else
+                        {
+                            // Redirect to user dashboard
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Login successful!');window.location ='Main Page After Logged In.aspx';", true);
+                        }
                     }
                     else
                     {
@@ -60,4 +67,5 @@ namespace DoughReMi
             }
         }
     }
-    }
+}
+    
