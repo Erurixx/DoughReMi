@@ -106,8 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin.css" />
+    <Content Include="Add Admin.aspx" />
     <Content Include="Admin Main Page.aspx" />
-    <Content Include="Admin Main Page.css" />
     <Content Include="AdminQuizAdd.aspx" />
     <Content Include="AdminQuizAdd.css" />
     <Content Include="AdminQuizDashboard.aspx" />
@@ -144,6 +145,7 @@
     <Content Include="Main Page.aspx" />
     <Content Include="Main Page.css" />
     <Content Include="Main Page.js" />
+    <Content Include="Manage Admin.aspx" />
     <Content Include="Manage User.aspx" />
     <Content Include="ManageContent.css" />
     <Content Include="RegisterNew.aspx" />
@@ -198,6 +200,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Admin.aspx.cs">
+      <DependentUpon>Add Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add Admin.aspx.designer.cs">
+      <DependentUpon>Add Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin Main Page.aspx.cs">
       <DependentUpon>Admin Main Page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -279,6 +288,13 @@
     </Compile>
     <Compile Include="Main Page.aspx.designer.cs">
       <DependentUpon>Main Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Admin.aspx.cs">
+      <DependentUpon>Manage Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage Admin.aspx.designer.cs">
+      <DependentUpon>Manage Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage User.aspx.cs">
       <DependentUpon>Manage User.aspx</DependentUpon>

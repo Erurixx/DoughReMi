@@ -32,7 +32,7 @@ namespace DoughReMi
             if (newPassword != confirmNewPassword)
             {
                 // Passwords do not match, show error message
-                Response.Write("<script>alert('New Password and Confirm New Password do not match');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('New Password and Confirm New Password do not match');", true);
                 return;
             }
 
@@ -40,21 +40,20 @@ namespace DoughReMi
             if (newPassword.Length < 8 || !System.Text.RegularExpressions.Regex.IsMatch(newPassword, @"\d") || !System.Text.RegularExpressions.Regex.IsMatch(newPassword, @"[a-zA-Z]"))
             {
                 // New password does not meet criteria, show error message
-                Response.Write("<script>alert('New Password must be at least 8 characters long and contain at least one number and one letter');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('New Password must be at least 8 characters long and contain at least one number and one letter');", true);
                 return;
             }
 
-            // TODO: Add logic to change password in your database
-            // Example code to update password in the database
-            string username = Session["storeUsername"]?.ToString(); // Retrieve username from session
+            // Retrieve current user's login identifier from session (username or email)
+            string loginIdentifier = Session["storeUsername"]?.ToString();
 
-            if (!string.IsNullOrEmpty(username))
+            if (!string.IsNullOrEmpty(loginIdentifier))
             {
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString))
                 {
-                    string query = "SELECT password FROM Register WHERE userName = @userName";
+                    string query = "SELECT password FROM Register WHERE userName = @loginIdentifier OR email = @loginIdentifier";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@userName", username);
+                    cmd.Parameters.AddWithValue("@loginIdentifier", loginIdentifier);
 
                     conn.Open();
                     string storedPassword = cmd.ExecuteScalar() as string;
@@ -63,23 +62,22 @@ namespace DoughReMi
                     // Validate if the current password matches the stored password
                     if (storedPassword == currentPassword)
                     {
-                        query = "UPDATE Register SET password = @newPassword WHERE userName = @userName";
+                        query = "UPDATE Register SET password = @newPassword WHERE userName = @loginIdentifier OR email = @loginIdentifier";
                         cmd = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@newPassword", newPassword);
-                        cmd.Parameters.AddWithValue("@userName", username);
+                        cmd.Parameters.AddWithValue("@loginIdentifier", loginIdentifier);
 
                         conn.Open();
                         cmd.ExecuteNonQuery();
                         conn.Close();
 
                         // Password updated successfully
-                        Response.Write("<script>alert('Password updated successfully');</script>");
-                        Response.Redirect("User Profile.aspx");
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Password updated successfully'); window.location ='Main Page After Logged In.aspx';", true);
                     }
                     else
                     {
                         // Current password is incorrect, show error message
-                        Response.Write("<script>alert('Current Password is incorrect');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Current Password is incorrect');", true);
                     }
                 }
             }

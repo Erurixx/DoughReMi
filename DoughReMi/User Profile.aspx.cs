@@ -21,14 +21,15 @@ namespace DoughReMi
 
                 try
                 {
-                    string username = Session["storeUsername"].ToString();
-                    string query = "SELECT imageURL FROM Register WHERE userName = @Username";
+                    // Retrieve the login identifier from the session
+                    string loginIdentifier = Session["storeUsername"]?.ToString();
+                    string query = "SELECT imageURL FROM Register WHERE userName = @loginIdentifier OR email = @loginIdentifier";
 
                     using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString))
                     {
                         using (SqlCommand cmd = new SqlCommand(query, con))
                         {
-                            cmd.Parameters.AddWithValue("@Username", username);
+                            cmd.Parameters.AddWithValue("loginIdentifier", loginIdentifier);
                             con.Open();
                             object result = cmd.ExecuteScalar();
                             if (result != null)
@@ -53,21 +54,11 @@ namespace DoughReMi
             }
         }
 
-        
-
-
-
-
-
-
-
-
-
         private void LoadUserProfile()
         {
 
-            string username = Session["storeUsername"].ToString(); // Retrieve stored username from session
-            string query = "SELECT fname, lname, email, userName, gender, imageURL FROM Register WHERE userName = @Username";
+            string loginIdentifier = Session["storeUsername"]?.ToString();
+            string query = "SELECT fname, lname, email, userName, gender, imageURL FROM Register WHERE userName = @loginIdentifier OR email = @loginIdentifier";
             // Example: Retrieve user profile data based on user ID or session
 
 
@@ -75,7 +66,7 @@ namespace DoughReMi
             {
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@Username", username); // Use @Username parameter to filter by username
+                    cmd.Parameters.AddWithValue("@loginIdentifier", loginIdentifier); // Use @Username parameter to filter by username
                     con.Open();
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
@@ -102,8 +93,8 @@ namespace DoughReMi
         {
             try
             {
-                // Retrieve current user's username from session or wherever it's stored
-                string username = Session["storeUsername"].ToString();
+                // Retrieve current user's login identifier from session (username or email)
+                string loginIdentifier = Session["storeUsername"].ToString();
 
                 // Check if a file is uploaded
                 string imageUrl = null;
@@ -127,13 +118,13 @@ namespace DoughReMi
 
 
                 // Retrieve current profile data from the database based on username
-                string query = "SELECT fname, lname, email, userName, gender, imageURL FROM Register WHERE userName = @userName";
+                string query = "SELECT fname, lname, email, userName, gender, imageURL FROM Register WHERE userName = @loginIdentifier OR email = @loginIdentifier";
 
                 using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString))
                 {
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.Parameters.AddWithValue("@userName", username);
+                        cmd.Parameters.AddWithValue("@loginIdentifier", loginIdentifier);
                         con.Open();
                         SqlDataReader reader = cmd.ExecuteReader();
                         if (reader.Read())
@@ -207,10 +198,28 @@ namespace DoughReMi
                             {
                                 string updateQuery = "UPDATE Register SET fname = @fname, lname = @lname, ";
                                 updateQuery += "email = @email, gender = @gender, imageURL = @imageURL ";
-                                updateQuery += "WHERE userName = @userName";
+                                updateQuery += "WHERE userName = @currentUsername";
 
-                                cmd.CommandText = updateQuery;
-                                cmd.ExecuteNonQuery();
+                                using (SqlCommand updateCmd = new SqlCommand(updateQuery, con))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@fname", cmd.Parameters["@fname"].Value);
+                                    updateCmd.Parameters.AddWithValue("@lname", cmd.Parameters["@lname"].Value);
+                                    updateCmd.Parameters.AddWithValue("@email", cmd.Parameters["@email"].Value);
+                                    updateCmd.Parameters.AddWithValue("@gender", cmd.Parameters["@gender"].Value);
+                                    updateCmd.Parameters.AddWithValue("@imageURL", cmd.Parameters["@imageURL"].Value);
+                                    updateCmd.Parameters.AddWithValue("@currentUsername", currentUsername);
+                                    updateCmd.ExecuteNonQuery();
+                                }
+
+                                // Update the session with the new email if it was changed
+                                if (txtEmail.Text.Trim() != currentEmail)
+                                {
+                                    Session["storeUsername"] = txtEmail.Text.Trim();
+                                }
+                                else
+                                {
+                                    Session["storeUsername"] = currentUsername;
+                                }
 
                                 // Update image URL for display if a new image was uploaded
                                 if (imageUrl != null)

@@ -24,16 +24,16 @@ namespace DoughReMi
 
         private void LoadUserProfile()
         {
-            // Retrieve the username from the session
-            string username = Session["storeUsername"]?.ToString();
+            // Retrieve the login identifier from the session
+            string loginIdentifier = Session["storeUsername"]?.ToString();
 
-            if (!string.IsNullOrEmpty(username))
+            if (!string.IsNullOrEmpty(loginIdentifier))
             {
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString))
                 {
-                    string query = "SELECT userName FROM Register WHERE userName = @userName";
+                    string query = "SELECT userName FROM Register WHERE userName = @loginIdentifier OR email = @loginIdentifier";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@userName", username);
+                    cmd.Parameters.AddWithValue("@loginIdentifier", loginIdentifier);
 
                     conn.Open();
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -51,15 +51,16 @@ namespace DoughReMi
 
         private void LoadProfilePicture()
         {
-            string username = Session["storeUsername"]?.ToString();
+            // Retrieve the login identifier from the session
+            string loginIdentifier = Session["storeUsername"]?.ToString();
 
-            if (!string.IsNullOrEmpty(username))
+            if (!string.IsNullOrEmpty(loginIdentifier))
             {
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString))
                 {
-                    string query = "SELECT imageURL FROM Register WHERE userName = @userName";
+                    string query = "SELECT imageURL FROM Register WHERE userName = @loginIdentifier OR email = @loginIdentifier";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@userName", username);
+                    cmd.Parameters.AddWithValue("@loginIdentifier", loginIdentifier);
 
                     conn.Open();
                     SqlDataReader reader = cmd.ExecuteReader();

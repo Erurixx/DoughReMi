@@ -9,7 +9,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <script src="Main Page.js"></script>
     <!-- Others -->
-    <link rel="stylesheet" href="Main Page.css" />
+    <link rel="stylesheet" href="MPAL New.css" />
     <!-- Title & Logo Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" />

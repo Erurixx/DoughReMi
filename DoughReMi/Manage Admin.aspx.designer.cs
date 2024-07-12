@@ -11,7 +11,7 @@ namespace DoughReMi
 {
 
 
-    public partial class Admin_Main_Page
+    public partial class Manage_Admin
     {
 
         /// <summary>
@@ -24,75 +24,48 @@ namespace DoughReMi
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// HyperLinkManageUser control.
+        /// AddUserButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageUser;
+        protected global::System.Web.UI.WebControls.Button AddUserButton;
 
         /// <summary>
-        /// HyperLinkManageAdmin control.
+        /// SearchTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageAdmin;
+        protected global::System.Web.UI.WebControls.TextBox SearchTextBox;
 
         /// <summary>
-        /// HyperLinkManageQuiz control.
+        /// SearchButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageQuiz;
+        protected global::System.Web.UI.WebControls.Button SearchButton;
 
         /// <summary>
-        /// HyperLinkManageForums control.
+        /// UserGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageForums;
+        protected global::System.Web.UI.WebControls.GridView UserGridView;
 
         /// <summary>
-        /// HyperLinkManageMenu control.
+        /// btnBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageMenu;
-
-        /// <summary>
-        /// HyperLinkManageVideos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageVideos;
-
-        /// <summary>
-        /// ProfilePicture control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ProfilePicture;
-
-        /// <summary>
-        /// usernamelbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label usernamelbl;
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }
