@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WAPP_Assignment.Assignment
+namespace DoughReMi
 {
     public partial class AdminQuizDashboard : Page
     {
@@ -19,7 +19,7 @@ namespace WAPP_Assignment.Assignment
 
         private void LoadQuizzes()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["QuizConnectionString"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -33,24 +33,24 @@ namespace WAPP_Assignment.Assignment
             }
         }
 
-        protected void btnAddQuiz_Click(object sender, EventArgs e)
+        protected void AddQuiz_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminQuizAdd.aspx");
         }
 
-        protected void btnEdit_Click(object sender, EventArgs e)
+        protected void Edit_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             string quizTitle = btn.CommandArgument;
             Response.Redirect("AdminQuizEdit.aspx?title=" + quizTitle);
         }
 
-        protected void btnDelete_Click(object sender, EventArgs e)
+        protected void Delete_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             string quizTitle = btn.CommandArgument;
 
-            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["QuizConnectionString"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -73,6 +73,11 @@ namespace WAPP_Assignment.Assignment
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // This can be left empty or used for additional functionality if needed.
+        }
+
+        protected void Back_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin Main Page.aspx");
         }
     }
 }
