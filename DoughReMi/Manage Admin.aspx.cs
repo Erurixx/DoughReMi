@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace DoughReMi
 {
-    public partial class Manage_User : System.Web.UI.Page
+    public partial class Manage_Admin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,7 +33,7 @@ namespace DoughReMi
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    string query = "SELECT Id, fname, lname, userName, email, gender FROM Register WHERE email NOT LIKE '%@admin.com'";
+                    string query = "SELECT Id, fname, lname, userName, email, gender FROM Register WHERE email LIKE '%@admin.com'";
 
                     if (!string.IsNullOrEmpty(searchTerm))
                     {
@@ -52,7 +52,7 @@ namespace DoughReMi
 
                     if (dt.Rows.Count == 0)
                     {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('No users found matching the search criteria.'); window.location='Manage User.aspx';", true);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('No users found matching the search criteria.'); window.location = 'Manage Admin.aspx';", true);
                     }
 
                     UserGridView.DataSource = dt;
@@ -75,7 +75,7 @@ namespace DoughReMi
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    string query = "SELECT Id, fname, lname, userName, email, gender FROM Register WHERE email NOT LIKE '%@admin.com%'";
+                    string query = "SELECT Id, fname, lname, userName, email, gender FROM Register WHERE email LIKE '%@admin.com'";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
@@ -105,6 +105,8 @@ namespace DoughReMi
             }
         }
 
+
+
         private void DeleteUser(int userId)
         {
             try
@@ -131,8 +133,6 @@ namespace DoughReMi
                         }
                     }
                 }
-
-                
             }
             catch (Exception ex)
             {
@@ -146,6 +146,11 @@ namespace DoughReMi
             Response.Redirect("Admin Main Page.aspx");
         }
 
-        
+        protected void AddUserButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Add Admin.aspx");
+        }
+
+
     }
 }

@@ -39,6 +39,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     margin-top: 2rem;
     padding: 0 2rem;
 }
@@ -304,3 +305,5 @@ footer {
     border-top: 1px solid #444;
     line-height: 1.5rem;
 }
+
+

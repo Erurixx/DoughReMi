@@ -7,57 +7,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="Admin Main Page.css" />
-    <link rel="stylesheet" href="Main Page.css" />
+    <link rel="stylesheet" href="Admin.css" />
+    <style type="text/css">
+        .company-logo {
+            height: 65px;
+            width: 82px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav id="desktop-nav">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets\company-logo.jpeg" alt="Company Logo" class="company-logo" />
+            </div>
         
-        <ul class="topnav">
-            
-
-            
-            <li class="dropdown">
-                    <a href="#content-management" class="dropbutton">User Management</a>
-                    <div class="dropdown-content">
-                        <a href="Manage User.aspx">Manage User</a>
-                        <a href="#manage-">Manage Admin</a>
-                    </div>
+            <ul class="list-unstyled components">
+                <!-- User Management -->
+                <li class="non-clickable">
+                    <span class="label">User Management</span>
+                    <ul class="list-unstyled">
+                        <li>
+                            <asp:HyperLink ID="HyperLinkManageUser" runat="server" NavigateUrl="Manage User.aspx">Manage User</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLinkManageAdmin" runat="server" NavigateUrl="Manage Admin.aspx">Manage Admin</asp:HyperLink>
+                        </li>
+                    </ul>
                 </li>
-            <li class="dropdown">
-                    <a href="#content-management" class="dropbutton">Content Management</a>
-                    <div class="dropdown-content">
-                        <a href="#manage">Manage Quiz & Assessments</a>
-                        <a href="#manage-">Manage Discussion Forums</a>
-                        <a href="#manage">Manage Menu & Recipes</a>
-                        <a href="#manage">Manage Videos</a>
-                    </div>
+                
+                <!-- Content Management -->
+                <li class="non-clickable">
+                    <span class="label">Content Management</span>
+                    <ul class="list-unstyled">
+                        <li>
+                            <asp:HyperLink ID="HyperLinkManageQuiz" runat="server" NavigateUrl="#manage-quiz">Manage Quiz &amp; Assessments</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLinkManageForums" runat="server" NavigateUrl="#manage-forums">Manage Discussion Forums</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLinkManageMenu" runat="server" NavigateUrl="#manage-menu">Manage Menu &amp; Recipes</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLinkManageVideos" runat="server" NavigateUrl="#manage-videos">Manage Videos</asp:HyperLink>
+                        </li>
+                    </ul>
                 </li>
-        </ul>    
-    </nav>
-        
-            
+                
+                <!-- Add more sections as needed -->
+                
+            </ul>    
+        </nav>
 
-        <div class="dashboard">
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Top Header with Profile Picture and Username -->
+            <header>
+                <div class="profile">
+                    <asp:ImageButton ID="ProfilePicture" runat="server" CssClass="profile-picture" ImageUrl="/assets/default-avatar.jpg" Height="43px" Width="43px" />
+                    <asp:Label ID="usernamelbl" runat="server" CssClass="username"></asp:Label>
+                </div>
+            </header>
             
-            <div class="dashboard-cards">
-                <div class="card">
-                    <h2>Total Users</h2>
-                    <p>150</p>
-                </div>
-                <div class="card">
-                    <h2>Active Users</h2>
-                    <p>120</p>
-                </div>
-                <div class="card">
-                    <h2>New Posts</h2>
-                    <p>30</p>
-                </div>
-                <div class="card">
-                    <h2>Reports</h2>
-                    <p>5</p>
-                </div>
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <!-- Your main content goes here -->
+                <!-- For example, display some widgets or information -->
+                <h2>Welcome to Your Admin Dashboard</h2>
+                <p>This is where you can manage users, content, and more.</p>
             </div>
         </div>
     </form>
