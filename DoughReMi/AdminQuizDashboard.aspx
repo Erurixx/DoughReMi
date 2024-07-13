@@ -13,8 +13,6 @@
         .auto-style2 {
             width: 1320px;
         }
-
-
     </style>
 </head>
 <body>

@@ -187,7 +187,8 @@
     <Content Include="User Profile New.css" />
     <Content Include="UserQuizAttempt.aspx" />
     <Content Include="UserQuizDashboard.aspx" />
-    <Content Include="UserQuizDashboard.css" />
+    <Content Include="UserquizDashboard.css" />
+    <Content Include="UserquizDashboard.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
