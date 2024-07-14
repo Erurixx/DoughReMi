@@ -23,6 +23,13 @@ namespace DoughReMi
             {
                 try
                 {
+
+                    // Check if email contains "@admin"
+                    if (email.Text.Contains("@admin"))
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Invalid email. Please try again!');", true);
+                        return;
+                    }
                     // Establish connection
                     using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString))
                     {
