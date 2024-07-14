@@ -11,7 +11,7 @@ namespace DoughReMi
 {
 
 
-    public partial class kay_test
+    public partial class AdminInd
     {
 
         /// <summary>

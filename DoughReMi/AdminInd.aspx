@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="kay_test.aspx.cs" Inherits="DoughReMi.kay_test" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminInd.aspx.cs" Inherits="DoughReMi.AdminInd" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Ingredients Form</title>
-    <link rel="stylesheet" type="text/css" href="kay_test.css" />
+    <link rel="stylesheet" type="text/css" href="AdminInd.css" />
  
 </head>
 <body>
