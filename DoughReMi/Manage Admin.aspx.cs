@@ -29,7 +29,10 @@ namespace DoughReMi
         {
             try
             {
+
+               
                 string connectionString = ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString;
+
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
@@ -41,6 +44,8 @@ namespace DoughReMi
                     }
 
                     SqlCommand cmd = new SqlCommand(query, con);
+                    
+
                     if (!string.IsNullOrEmpty(searchTerm))
                     {
                         cmd.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
@@ -103,6 +108,14 @@ namespace DoughReMi
 
                 DeleteUser(userId);
             }
+
+            if (e.CommandName == "EditUser")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = UserGridView.Rows[index];
+                string adminId = UserGridView.DataKeys[index].Value.ToString();
+                Response.Redirect("Edit Admin.aspx?adminId=" + adminId);
+            }
         }
 
 
@@ -133,6 +146,8 @@ namespace DoughReMi
                         }
                     }
                 }
+
+
             }
             catch (Exception ex)
             {
