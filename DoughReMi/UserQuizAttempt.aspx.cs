@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WAPP_Assignment.Assignment
+namespace DoughReMi
 {
     public partial class UserQuizAttempt : Page
     {
@@ -14,23 +14,17 @@ namespace WAPP_Assignment.Assignment
         {
             if (!IsPostBack)
             {
-                string quizTitle = Request.QueryString["title"];
-                if (!string.IsNullOrEmpty(quizTitle))
-                {
-                    lblQuizTitle.Text = quizTitle;
-                    LoadQuizQuestions(quizTitle);
-                }
-                else
-                {
-                    // Handle case when the title is not provided
-                    Response.Write("<script>alert('Quiz title not provided.');</script>");
-                }
+                string quizTitle = Request.QueryString["title"];                
+                lblQuizTitle.Text = quizTitle;
+                LoadQuizQuestions(quizTitle);
+                LoadUserProfile();
+                LoadProfilePicture();
             }
         }
 
         private void LoadQuizQuestions(string quizTitle)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["QuizConnectionString"].ConnectionString;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -105,6 +99,60 @@ namespace WAPP_Assignment.Assignment
             }
         }
 
+        private void LoadUserProfile()
+        {
+            // Retrieve the login identifier from the session
+            string loginIdentifier = Session["storeUsername"]?.ToString();
+
+            if (!string.IsNullOrEmpty(loginIdentifier))
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString))
+                {
+                    string query = "SELECT userName FROM Register WHERE userName = @loginIdentifier OR email = @loginIdentifier";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@loginIdentifier", loginIdentifier);
+
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        // Set the username in the label
+                        usernamelbl.Text = "Hi, " + reader["userName"].ToString();
+                    }
+                    conn.Close();
+                }
+            }
+        }
+
+        private void LoadProfilePicture()
+        {
+            // Retrieve the login identifier from the session
+            string loginIdentifier = Session["storeUsername"]?.ToString();
+
+            if (!string.IsNullOrEmpty(loginIdentifier))
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString))
+                {
+                    string query = "SELECT imageURL FROM Register WHERE userName = @loginIdentifier OR email = @loginIdentifier";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@loginIdentifier", loginIdentifier);
+
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string imageUrl = reader["imageURL"].ToString();
+                        if (!string.IsNullOrEmpty(imageUrl))
+                        {
+                            ProfilePicture.ImageUrl = imageUrl;
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+        }
+
+
         protected void rptQuestions_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
@@ -122,10 +170,13 @@ namespace WAPP_Assignment.Assignment
                 rblChoices.Items[2].Value = "C";
                 rblChoices.Items[3].Text = question.ChoiceD;
                 rblChoices.Items[3].Value = "D";
+
+                Label lblCorrectAnswer = (Label)e.Item.FindControl("lblCorrectAnswer");
+                lblCorrectAnswer.Text = $"Correct Answer: {question.CorrectAnswer}";
             }
         }
 
-        protected void btnFinishAttempt_Click(object sender, EventArgs e)
+        protected void FinishAttempt_Click(object sender, EventArgs e)
         {
             int totalQuestions = rptQuestions.Items.Count;
             int correctAnswers = 0;
@@ -147,6 +198,11 @@ namespace WAPP_Assignment.Assignment
                 {
                     correctAnswers++;
                 }
+                else
+                {
+                    Label lblCorrectAnswer = (Label)item.FindControl("lblCorrectAnswer");
+                    lblCorrectAnswer.Visible = true; // Show the correct answer
+                }
             }
 
             if (!allAnswered)
@@ -155,14 +211,20 @@ namespace WAPP_Assignment.Assignment
             }
             else
             {
-                int score = (correctAnswers * 100) / totalQuestions;
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", $"alert('Your score is: {score}');", true);
+                int scoreValue = (correctAnswers * 100) / totalQuestions;
+                score.Text = scoreValue.ToString();
+
+                // Save the score and time into Quizzes_Score table
+                SaveScore(username.Text, lblQuizTitle.Text, scoreValue);
+
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", $"alert('Your score is: {scoreValue}');", true);
             }
         }
 
+
         private string GetCorrectAnswer(string quizTitle, string questionText)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["QuizConnectionString"].ConnectionString;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -182,6 +244,34 @@ namespace WAPP_Assignment.Assignment
                 }
             }
             return string.Empty;
+        }
+
+        private void SaveScore(string username, string quizTitle, int score)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["QuizConnectionString"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "INSERT INTO Quizzes_Score (username, title, score) VALUES (@username, @title, @score)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@title", quizTitle);
+                cmd.Parameters.AddWithValue("@score", score);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
+        protected void Back_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserQuizDashboard.aspx");
+        }
+
+        protected void ProfilePicture_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("User Profile.aspx");
         }
     }
 

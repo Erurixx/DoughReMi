@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WAPP_Assignment.Assignment
+namespace DoughReMi
 {
 
 
@@ -22,6 +22,24 @@ namespace WAPP_Assignment.Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
+        /// ProfilePicture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ProfilePicture;
+
+        /// <summary>
+        /// usernamelbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label usernamelbl;
 
         /// <summary>
         /// lblQuizTitle control.
@@ -78,12 +96,21 @@ namespace WAPP_Assignment.Assignment
         protected global::System.Web.UI.WebControls.Repeater rptQuestions;
 
         /// <summary>
-        /// btnFinishAttempt control.
+        /// Back control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFinishAttempt;
+        protected global::System.Web.UI.WebControls.Button Back;
+
+        /// <summary>
+        /// FinishAttempt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button FinishAttempt;
     }
 }

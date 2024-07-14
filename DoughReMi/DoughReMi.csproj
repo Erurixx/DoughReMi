@@ -187,6 +187,8 @@
     <Content Include="User Profile.aspx" />
     <Content Include="User Profile New.css" />
     <Content Include="UserQuizAttempt.aspx" />
+    <Content Include="UserQuizAttempt.css" />
+    <Content Include="UserQuizAttempt.js" />
     <Content Include="UserQuizDashboard.aspx" />
     <Content Include="UserquizDashboard.css" />
     <Content Include="UserquizDashboard.js" />

@@ -2,7 +2,7 @@
 
 .form-container {
     margin: 20px;
-    margin-bottom: 350px; /* Adjust this value to create the desired space */
+    margin-bottom: 350px;
 }
 
 html {
@@ -18,31 +18,27 @@ body {
     font-variation-settings: "slnt" 0;
 }
 
-.dashboard-header {
+.page-title {
     text-align: center;
 }
 
-    .dashboard-header h2 {
+    .page-title h2 {
         font-weight: bold;
     }
 
-.quiz-table {
+.auto-style1 {
     width: 100%;
-    border-collapse: collapse;
+    table-layout: fixed; /* Ensures equal width columns */
 }
 
-    .quiz-table th, .quiz-table td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-        font-size: 1rem;
+    .auto-style1 td {
+        width: 50%; /* Each column takes up an equal portion of the total width */
+        text-align: center; /* Center-aligns the content in each cell */
     }
 
-    .quiz-table th {
-        background-color: #fde047;
-        color: black;
-        text-align: center;
-    }
+.auto-style2 {
+    width: 100%;
+}
 
 .button-container {
     text-align: right;
@@ -89,10 +85,10 @@ nav {
         color: black;
     }
 
-    .topnav a:hover {
-        color: #E8D10D;
-        transition: background-color 0.3s, color 0.3s;
-     }
+        .topnav a:hover {
+            color: #E8D10D;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
 .logo a {
     margin-left: 2rem;
