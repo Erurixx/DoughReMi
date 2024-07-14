@@ -38,11 +38,12 @@
 
         <div class="admin-container">
             
-            <asp:Button ID="AddUserButton" runat="server" Text="Add New User" OnClick="AddUserButton_Click" CssClass="btn btn-primary" />
-
             <div class="search-container">
                 <asp:TextBox ID="SearchTextBox" runat="server" CssClass="search-box" placeholder="Search by Username or Email" Height="40px" Width="278px"></asp:TextBox>
                 <asp:Button ID="SearchButton" runat="server" Text="Search" OnClick="SearchButton_Click" CssClass="btn btn-primary" />
+            
+            <asp:Button ID="AddUserButton" runat="server" Text="Add New User" OnClick="AddUserButton_Click" CssClass="btn btn-primary" />
+
             </div>
 
 
@@ -55,7 +56,14 @@
                     <asp:BoundField DataField="email" HeaderText="Email" />
                     <asp:BoundField DataField="gender" HeaderText="Gender" />
                     
-                    <asp:ButtonField ButtonType="Button" CommandName="DeleteUser" Text="Delete" ItemStyle-CssClass="delete-button"/>
+                    <asp:TemplateField HeaderText="Actions">
+                        <ItemTemplate>
+                            <asp:Button ID="EditButton" runat="server" CommandName="EditUser" CommandArgument="<%# Container.DataItemIndex %>" Text="Edit" CssClass="edit-button" />
+                            <asp:Button ID="DeleteButton" runat="server" CommandName="DeleteUser" CommandArgument="<%# Container.DataItemIndex %>" Text="Delete" CssClass="delete-button" />
+                        </ItemTemplate>
+                        <ItemStyle CssClass="action-buttons" />
+                    </asp:TemplateField>
+
                 </Columns>
             </asp:GridView>
         </div>
