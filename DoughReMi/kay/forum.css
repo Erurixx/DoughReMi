@@ -1,0 +1,99 @@
+﻿/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif; /* Applying Times New Roman font */
+}
+
+/* Body styles */
+body {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center align container */
+}
+
+/* Discussion Forum title */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif; /* Applying Times New Roman font */
+}
+
+/* Styling for each post box */
+.post-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+/* Styling for post content */
+.post-content {
+    margin-bottom: 10px;
+}
+
+/* Styling for comments section */
+.comments {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Styling for each comment */
+.comment {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+    line-height: 1.5; /* Improved readability with slightly increased line height */
+}
+
+/* Styling for comment form */
+.comment-form {
+    margin-top: 10px;
+}
+
+/* Styling for text boxes */
+.custom-textbox {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif; /* Applying Times New Roman font */
+}
+
+/* Styling for buttons */
+.custom-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif; /* Applying Times New Roman font */
+}
+
+    .custom-button:hover {
+        background-color: #0056b3;
+    }
+
+/* Additional styling for the post button */
+.post-button {
+    margin-top: 10px; /* Adds space between post form and button */
+}
+
+/* Hide the 'Comment:' label */
+.comment p strong {
+    display: none;
+}
