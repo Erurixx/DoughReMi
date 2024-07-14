@@ -139,7 +139,106 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="kay\bin\kay.dll.config" />
+    <Content Include="kay\bin\roslyn\csc.exe.config" />
+    <Content Include="kay\bin\roslyn\csc.rsp" />
+    <Content Include="kay\bin\roslyn\csi.exe.config" />
+    <Content Include="kay\bin\roslyn\csi.rsp" />
+    <Content Include="kay\bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="kay\bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="kay\bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="kay\bin\roslyn\vbc.exe.config" />
+    <Content Include="kay\bin\roslyn\vbc.rsp" />
+    <Content Include="kay\bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="kay\kay.csproj" />
+    <Content Include="kay\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="kay\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="kay\obj\Debug\kay.csproj.AssemblyReference.cache" />
+    <Content Include="kay\obj\Debug\kay.csproj.CoreCompileInputs.cache" />
+    <None Include="kay\packages.config" />
+    <Content Include="kay\Web.config" />
+    <None Include="kay\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="kay\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="kay\ADMIN_DF.aspx" />
+    <Content Include="kay\ADMIN_DF.css" />
+    <Content Include="kay\aForum.aspx" />
+    <Content Include="kay\aForum.css" />
+    <Content Include="kay\App_Data\indgredient.mdf" />
+    <Content Include="kay\App_Data\indgredient_log.ldf">
+      <DependentUpon>indgredient.mdf</DependentUpon>
+    </Content>
+    <Content Include="kay\assets\113flour.jpeg" />
+    <Content Include="kay\assets\19cbe958-0500-45a0-bc8b-0b622866f9c2.jpg" />
+    <Content Include="kay\assets\1b784237-1b97-4847-80bd-8f04d88727dc.jpg" />
+    <Content Include="kay\assets\672flour.jpeg" />
+    <Content Include="kay\assets\786apu.jpg" />
+    <Content Include="kay\assets\9ef3e234-0a2d-41cc-81d0-1601affd58e5.jpg" />
+    <Content Include="kay\assets\a0931497-497d-4b8c-bf1b-6e3d24a82a0c.jpg" />
+    <Content Include="kay\assets\apu.jpg" />
+    <Content Include="kay\assets\e9137d7a-9e14-4ec8-803b-11f826535ef0.jpg" />
+    <Content Include="kay\assets\eed6ec57-380a-4b1c-9ec0-8f7820667560.png" />
+    <Content Include="kay\assets\f199ec56-5657-47c5-a442-14b8c4d1a6f3.jpeg" />
+    <Content Include="kay\assets\flour.jpeg" />
+    <Content Include="kay\assets\flour.jpg" />
+    <Content Include="kay\A_MI.aspx" />
+    <Content Include="kay\A_MI.css" />
+    <Content Include="kay\bin\kay.dll" />
+    <Content Include="kay\bin\kay.pdb" />
+    <Content Include="kay\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="kay\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="kay\bin\roslyn\csc.exe" />
+    <Content Include="kay\bin\roslyn\csi.exe" />
+    <Content Include="kay\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="kay\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="kay\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="kay\bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="kay\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="kay\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="kay\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="kay\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="kay\bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="kay\bin\roslyn\System.AppContext.dll" />
+    <Content Include="kay\bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="kay\bin\roslyn\System.Console.dll" />
+    <Content Include="kay\bin\roslyn\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="kay\bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="kay\bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="kay\bin\roslyn\System.Globalization.Calendars.dll" />
+    <Content Include="kay\bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="kay\bin\roslyn\System.IO.Compression.ZipFile.dll" />
+    <Content Include="kay\bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="kay\bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="kay\bin\roslyn\System.Net.Http.dll" />
+    <Content Include="kay\bin\roslyn\System.Net.Sockets.dll" />
+    <Content Include="kay\bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="kay\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="kay\bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="kay\bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="kay\bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="kay\bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="kay\bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="kay\bin\roslyn\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="kay\bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="kay\bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="kay\bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="kay\bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="kay\bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="kay\bin\roslyn\vbc.exe" />
+    <Content Include="kay\bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="kay\dbConnection.aspx" />
+    <Content Include="kay\forum.aspx" />
+    <Content Include="kay\forum.css" />
+    <Content Include="kay\kay.csproj.user" />
+    <Content Include="kay\obj\Debug\kay.csproj.FileListAbsolute.txt" />
+    <Content Include="kay\obj\Debug\kay.dll" />
+    <Content Include="kay\obj\Debug\kay.pdb" />
+    <Content Include="kay\user.aspx" />
+    <Content Include="kay\user.css" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="Main Page After Logged In.aspx" />
@@ -279,6 +378,50 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="kay\ADMIN_DF.aspx.cs">
+      <DependentUpon>ADMIN_DF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kay\ADMIN_DF.aspx.designer.cs">
+      <DependentUpon>ADMIN_DF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kay\aForum.aspx.cs">
+      <DependentUpon>aForum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kay\aForum.aspx.designer.cs">
+      <DependentUpon>aForum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kay\A_MI.aspx.cs">
+      <DependentUpon>A_MI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kay\A_MI.aspx.designer.cs">
+      <DependentUpon>A_MI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kay\dbConnection.aspx.cs">
+      <DependentUpon>dbConnection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kay\dbConnection.aspx.designer.cs">
+      <DependentUpon>dbConnection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kay\forum.aspx.cs">
+      <DependentUpon>forum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kay\forum.aspx.designer.cs">
+      <DependentUpon>forum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kay\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="kay\Properties\AssemblyInfo.cs" />
+    <Compile Include="kay\user.aspx.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kay\user.aspx.designer.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -374,6 +517,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\" />
+    <Folder Include="kay\obj\Debug\TempPE\" />
     <Folder Include="UploadedImages\" />
   </ItemGroup>
   <ItemGroup>
