@@ -140,6 +140,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="kay_test.aspx" />
+    <Content Include="kay_test.css" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="Main Page After Logged In.aspx" />
@@ -278,6 +280,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="kay_test.aspx.cs">
+      <DependentUpon>kay_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kay_test.aspx.designer.cs">
+      <DependentUpon>kay_test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
