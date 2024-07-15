@@ -31,10 +31,10 @@
                 <a href="#menu-recipe" class="dropbutton">Menu & Recipes</a>    
             </li>
 
-            <li><a href="#quiz-assessments">Quiz & Assessments</a></li>
+            
             <li><a href="#ingredients">Ingredients</a></li>
-            <li><a href="#forums">Forums</a></li>
-            <li><a href="#bookmark">Bookmark</a></li>
+            
+            
             <li><a href="#terms-condition">Terms and Condition</a></li>
         </ul>
 
