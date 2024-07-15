@@ -109,6 +109,8 @@
     <Content Include="Admin.css" />
     <Content Include="Add Admin.aspx" />
     <Content Include="Admin Main Page.aspx" />
+    <Content Include="AdminForum.aspx" />
+    <Content Include="AdminForum.css" />
     <Content Include="AdminQuizAdd.aspx" />
     <Content Include="AdminQuizAdd.css" />
     <Content Include="AdminQuizDashboard.aspx" />
@@ -139,6 +141,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="UserForum.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="AdminInd.aspx" />
     <Content Include="AdminInd.css" />
@@ -188,6 +191,9 @@
     <Content Include="terms and condition.css" />
     <Content Include="User Profile.aspx" />
     <Content Include="User Profile New.css" />
+    <Content Include="UserForum.css" />
+    <Content Include="UserIngredient.aspx" />
+    <Content Include="UserIngredient.css" />
     <Content Include="UserQuizAttempt.aspx" />
     <Content Include="UserQuizAttempt.css" />
     <Content Include="UserQuizAttempt.js" />
@@ -219,6 +225,13 @@
     </Compile>
     <Compile Include="Admin Main Page.aspx.designer.cs">
       <DependentUpon>Admin Main Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForum.aspx.cs">
+      <DependentUpon>AdminForum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminForum.aspx.designer.cs">
+      <DependentUpon>AdminForum.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminQuizAdd.aspx.cs">
       <DependentUpon>AdminQuizAdd.aspx</DependentUpon>
@@ -359,6 +372,13 @@
     <Compile Include="User Profile.aspx.designer.cs">
       <DependentUpon>User Profile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserIngredient.aspx.cs">
+      <DependentUpon>UserIngredient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserIngredient.aspx.designer.cs">
+      <DependentUpon>UserIngredient.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserQuizAttempt.aspx.cs">
       <DependentUpon>UserQuizAttempt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -379,6 +399,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserForum.aspx.cs">
+      <DependentUpon>UserForum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserForum.aspx.designer.cs">
+      <DependentUpon>UserForum.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

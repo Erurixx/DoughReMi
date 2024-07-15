@@ -11,7 +11,7 @@ namespace DoughReMi
 {
 
 
-    public partial class UserQuizDashboard
+    public partial class UserForum
     {
 
         /// <summary>
@@ -24,48 +24,30 @@ namespace DoughReMi
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// ProfilePicture control.
+        /// txtNewPost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ProfilePicture;
+        protected global::System.Web.UI.WebControls.TextBox txtNewPost;
 
         /// <summary>
-        /// usernamelbl control.
+        /// BtnSubmitPost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label usernamelbl;
+        protected global::System.Web.UI.WebControls.Button BtnSubmitPost;
 
         /// <summary>
-        /// btnBack control.
+        /// RptPosts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBack;
-
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// GridView2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.Repeater RptPosts;
     }
 }

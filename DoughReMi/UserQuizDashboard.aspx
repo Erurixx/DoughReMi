@@ -43,7 +43,7 @@
         <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="btn" OnClick="Back_Click" />
 
         <div class="dashboard-header">
-            <h2>User Quiz Dashboard</h2>
+            <h2>Quizzes History</h2>
         </div>
 
             <div class="form-container">
@@ -73,6 +73,30 @@
                     </Columns>
                 </asp:GridView>
                 <br />
+                <br />
+                <div class="dashboard-header">
+            <h2>Quiz Attempted History</h2>
+                </div>
+                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CssClass="quiz-table" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
+                    <Columns>
+
+                        <asp:BoundField DataField="username" HeaderText="Username">
+                            <ItemStyle Width="150px" />
+                            <HeaderStyle Width="150px" />
+                        </asp:BoundField>
+
+                        <asp:BoundField DataField="title" HeaderText="Quiz Title">
+                            <ItemStyle Width="400px" />
+                            <HeaderStyle Width="400px" />
+                        </asp:BoundField>
+
+                        <asp:BoundField DataField="score" HeaderText="Quiz Score">
+                            <ItemStyle Width="100px" />
+                            <HeaderStyle Width="100px" />
+                        </asp:BoundField>
+
+                    </Columns>
+                </asp:GridView>
             </div>
         </form>
 

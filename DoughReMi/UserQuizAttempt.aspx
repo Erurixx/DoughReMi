@@ -61,7 +61,7 @@
 
         <div class="form-container">
             <br />
-            <asp:Repeater ID="rptQuestions" runat="server" OnItemDataBound="rptQuestions_ItemDataBound">
+            <asp:Repeater ID="rptQuestions" runat="server" OnItemDataBound="rptQuestions_ItemDataBound" OnItemCommand="rptQuestions_ItemCommand">
                 <ItemTemplate>
                     <div class="question">
                         <asp:Label ID="lblQuestion" runat="server" Text='<%# Eval("QuestionText") %>' />

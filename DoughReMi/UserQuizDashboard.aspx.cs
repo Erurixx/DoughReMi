@@ -16,6 +16,7 @@ namespace DoughReMi
                 LoadUserProfile();
                 LoadProfilePicture();
                 LoadQuizzes();
+                LoadScore();
             }
         }
 
@@ -33,6 +34,22 @@ namespace DoughReMi
 
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
+            }
+        }
+
+        private void LoadScore()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["QuizConnectionString"].ConnectionString;
+            
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT username, title, score FROM Quizzes_Score WHERE username = @username";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                GridView2.DataSource = dt;
+                GridView2.DataBind();
             }
         }
 
@@ -71,7 +88,6 @@ namespace DoughReMi
                     conn.Close();
                 }
             }
-
         }
 
 
@@ -109,6 +125,11 @@ namespace DoughReMi
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

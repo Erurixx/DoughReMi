@@ -11,7 +11,7 @@ namespace DoughReMi
 {
 
 
-    public partial class UserQuizDashboard
+    public partial class UserIngredient
     {
 
         /// <summary>
@@ -24,31 +24,13 @@ namespace DoughReMi
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// ProfilePicture control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ProfilePicture;
-
-        /// <summary>
-        /// usernamelbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label usernamelbl;
-
-        /// <summary>
-        /// btnBack control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBack;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// GridView1 control.
@@ -60,12 +42,12 @@ namespace DoughReMi
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// GridView2 control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

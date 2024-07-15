@@ -118,6 +118,7 @@ namespace DoughReMi
                     {
                         // Set the username in the label
                         usernamelbl.Text = "Hi, " + reader["userName"].ToString();
+                        username.Text = reader["userName"].ToString();
                     }
                     conn.Close();
                 }
@@ -272,6 +273,11 @@ namespace DoughReMi
         protected void ProfilePicture_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("User Profile.aspx");
+        }
+
+        protected void rptQuestions_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
         }
     }
 
