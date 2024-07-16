@@ -5,12 +5,10 @@
 <head runat="server">
     <title>User Quiz Attempt</title>
     <link rel="stylesheet" type="text/css" href="UserQuizAttempt.css" />
-        <!-- Title & Logo Font -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" />
+    <!-- Title & Logo Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" />
     <!-- Body Font -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
     <script src="https://kit.fontawesome.com/014d9f8d85.js" crossorigin="anonymous"></script>
     <script src="UserQuizAttempt.js"></script>
 </head>
@@ -47,17 +45,17 @@
         <br />
 
         <table class="auto-style1">
-                <tr>
-                    <td>
-                        <asp:Label ID="Label1" runat="server" Text="Username : "></asp:Label>
-                        <asp:Label ID="username" runat="server"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:Label ID="Label2" runat="server" Text="Score : "></asp:Label>
-                        <asp:Label ID="score" runat="server">0</asp:Label>
-                    </td>
-                </tr>
-            </table>
+            <tr>
+                <td>
+                    <asp:Label ID="Label1" runat="server" Text="Username : "></asp:Label>
+                    <asp:Label ID="username" runat="server"></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="Label2" runat="server" Text="Score : "></asp:Label>
+                    <asp:Label ID="score" runat="server">0</asp:Label>
+                </td>
+            </tr>
+        </table>
 
         <div class="form-container">
             <br />
@@ -71,7 +69,6 @@
                             <asp:ListItem Text="Choice C" Value="C" />
                             <asp:ListItem Text="Choice D" Value="D" />
                         </asp:RadioButtonList>
-                        <asp:Label ID="lblCorrectAnswer" runat="server" Visible="false" CssClass="correct-answer" />
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
@@ -80,11 +77,11 @@
             <table class="auto-style2">
                 <tr>
                     <td>
-                        <asp:Button ID="Back" runat="server" Text="Back" OnClick="Back_Click" CssClass="btn"/>
+                        <asp:Button ID="Back" runat="server" Text="Back" OnClick="Back_Click" CssClass="btn" />
                     </td>
                     <td>
                         <div class="button-container">
-                            <asp:Button ID="FinishAttempt" runat="server" Text="Finish Attempt" OnClick="FinishAttempt_Click" CssClass="btn" OnClientClick="saveElapsedTime();" />
+                            <asp:Button ID="FinishAttempt" runat="server" Text="Finish Attempt" OnClick="FinishAttempt_Click" CssClass="btn" />
                         </div>
                     </td>
                 </tr>
@@ -93,10 +90,10 @@
         </div>
 
         <footer>
-        <div class="footer-bottom">
-            <p>&copy; 2024 DoughReMi. All rights reserved.</p>
-        </div>
-    </footer>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DoughReMi. All rights reserved.</p>
+            </div>
+        </footer>
 
     </form>
 </body>

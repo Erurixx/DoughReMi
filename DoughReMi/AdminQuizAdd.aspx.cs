@@ -14,7 +14,7 @@ namespace WAPP_Assignment.Assignment
 
         protected void Add_Click(object sender, EventArgs e)
         { 
-            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["QuizConnectionString"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

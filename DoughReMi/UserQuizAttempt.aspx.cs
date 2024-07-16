@@ -54,7 +54,6 @@ namespace DoughReMi
                         ChoiceB = row["choiceBq1"].ToString(),
                         ChoiceC = row["choiceCq1"].ToString(),
                         ChoiceD = row["choiceDq1"].ToString(),
-                        CorrectAnswer = row["ansQ1"].ToString()
                     });
                     questions.Add(new Question
                     {
@@ -63,7 +62,6 @@ namespace DoughReMi
                         ChoiceB = row["choiceBq2"].ToString(),
                         ChoiceC = row["choiceCq2"].ToString(),
                         ChoiceD = row["choiceDq2"].ToString(),
-                        CorrectAnswer = row["ansQ2"].ToString()
                     });
                     questions.Add(new Question
                     {
@@ -72,7 +70,6 @@ namespace DoughReMi
                         ChoiceB = row["choiceBq3"].ToString(),
                         ChoiceC = row["choiceCq3"].ToString(),
                         ChoiceD = row["choiceDq3"].ToString(),
-                        CorrectAnswer = row["ansQ3"].ToString()
                     });
                     questions.Add(new Question
                     {
@@ -81,7 +78,6 @@ namespace DoughReMi
                         ChoiceB = row["choiceBq4"].ToString(),
                         ChoiceC = row["choiceCq4"].ToString(),
                         ChoiceD = row["choiceDq4"].ToString(),
-                        CorrectAnswer = row["ansQ4"].ToString()
                     });
                     questions.Add(new Question
                     {
@@ -90,7 +86,6 @@ namespace DoughReMi
                         ChoiceB = row["choiceBq5"].ToString(),
                         ChoiceC = row["choiceCq5"].ToString(),
                         ChoiceD = row["choiceDq5"].ToString(),
-                        CorrectAnswer = row["ansQ5"].ToString()
                     });
                 }
 
@@ -172,8 +167,6 @@ namespace DoughReMi
                 rblChoices.Items[3].Text = question.ChoiceD;
                 rblChoices.Items[3].Value = "D";
 
-                Label lblCorrectAnswer = (Label)e.Item.FindControl("lblCorrectAnswer");
-                lblCorrectAnswer.Text = $"Correct Answer: {question.CorrectAnswer}";
             }
         }
 
@@ -200,11 +193,6 @@ namespace DoughReMi
                 {
                     correctAnswers++;
                 }
-                else
-                {
-                    Label lblCorrectAnswer = (Label)item.FindControl("lblCorrectAnswer");
-                    lblCorrectAnswer.Visible = true; // Show the correct answer
-                }
             }
 
             if (!allAnswered)
@@ -220,6 +208,7 @@ namespace DoughReMi
                 SaveScore(username.Text, lblQuizTitle.Text, scoreValue);
 
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", $"alert('Your score is: {scoreValue}');", true);
+                Response.Redirect("UserQuizDashboard.aspx");
             }
         }
 
@@ -289,6 +278,5 @@ namespace DoughReMi
         public string ChoiceB { get; set; }
         public string ChoiceC { get; set; }
         public string ChoiceD { get; set; }
-        public string CorrectAnswer { get; set; }
     }
 }

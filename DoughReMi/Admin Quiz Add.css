@@ -5,7 +5,7 @@
 
 .form-container {
     max-width: 1000px;
-    margin: 50px auto;
+    margin: auto;
     padding: 50px;
     background-color: white;
     border-radius: 5px;
@@ -43,6 +43,24 @@
         cursor: pointer;
         font-size: 16px;
     }
+
+.button-container {
+    text-align: right;
+}
+
+.btn {
+    background-color: #fde047;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    display: inline-block;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
 
 .alert {
     padding: 20px;

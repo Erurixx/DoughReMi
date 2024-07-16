@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Add Quiz</title>
-    <link rel="stylesheet" type="text/css" href="AdminQuizAdd.css" />
+    <link rel="stylesheet" type="text/css" href="Admin Quiz Add.css" />
     <style type="text/css">
         .auto-style1 {
             width: 865px;
@@ -296,15 +296,13 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Cancel_Click" />
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Cancel_Click" CssClass="btn" />
                     </td>
-                    <td class="auto-style1">
-                        <asp:Button ID="btnAdd" runat="server" Text="Add" ValidationGroup="AddGroup" OnClick="Add_Click" />
-                    </td>
-                </tr>
-                <tr>
                     <td>
-                        &nbsp;</td>
+                        <div class="button-container">
+                            <asp:Button ID="btnAdd" runat="server" Text="Add" ValidationGroup="AddGroup" OnClick="Add_Click" CssClass="btn" />
+                        </div>
+                    </td>
                 </tr>
             </table>
         </div>
