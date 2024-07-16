@@ -40,7 +40,7 @@
             </div>
         </nav>
         <br />
-        <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="btn" OnClick="Back_Click" />
+        <asp:Button ID="btnBack" runat="server" Text="Back to Previous Page" CssClass="btn" OnClick="Back_Click" />
 
         <div class="dashboard-header">
             <h2>Quizzes History</h2>

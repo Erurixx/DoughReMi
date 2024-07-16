@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>User Quiz Attempt</title>
-    <link rel="stylesheet" type="text/css" href="UserQuizAttempt.css" />
+    <link rel="stylesheet" type="text/css" href="User Quiz Attempt.css" />
     <!-- Title & Logo Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" />
     <!-- Body Font -->
@@ -21,9 +21,9 @@
             </div>
             <ul class="topnav">
                 <li><a href="#menu-recipe">Menu & Recipes</a></li>
-                <li><a href="#quiz-assessments">Quiz & Assessments</a></li>
-                <li><a href="#ingredients">Ingredients</a></li>
-                <li><a href="#forums">Forums</a></li>
+                <li><a href="UserQuizDashboard.aspx">Quiz & Assessments</a></li>
+                <li><a href="UserIngredient.aspx">Ingredients</a></li>
+                <li><a href="UserForum.aspx">Forums</a></li>
                 <li><a href="#bookmark">Bookmark</a></li>
                 <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
             </ul>
@@ -63,11 +63,11 @@
                 <ItemTemplate>
                     <div class="question">
                         <asp:Label ID="lblQuestion" runat="server" Text='<%# Eval("QuestionText") %>' />
-                        <asp:RadioButtonList ID="rblChoices" runat="server">
-                            <asp:ListItem Text="Choice A" Value="A" />
-                            <asp:ListItem Text="Choice B" Value="B" />
-                            <asp:ListItem Text="Choice C" Value="C" />
-                            <asp:ListItem Text="Choice D" Value="D" />
+                        <asp:RadioButtonList ID="rblChoices" runat="server" CssClass="rblChoices">
+                            <asp:ListItem Text="Choice A" Value="A" CssClass="list-item" />
+                            <asp:ListItem Text="Choice B" Value="B" CssClass="list-item" />
+                            <asp:ListItem Text="Choice C" Value="C" CssClass="list-item" />
+                            <asp:ListItem Text="Choice D" Value="D" CssClass="list-item" />
                         </asp:RadioButtonList>
                     </div>
                 </ItemTemplate>
@@ -77,7 +77,7 @@
             <table class="auto-style2">
                 <tr>
                     <td>
-                        <asp:Button ID="Back" runat="server" Text="Back" OnClick="Back_Click" CssClass="btn" />
+                        <asp:Button ID="Back" runat="server" Text="Back to Previous Page" OnClick="Back_Click" CssClass="btn" />
                     </td>
                     <td>
                         <div class="button-container">

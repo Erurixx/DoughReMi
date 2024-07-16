@@ -32,8 +32,6 @@
 
         </div>
         <ul class="topnav">
-            
-
             <li><a href="#menu-recipe" >Menu & Recipes</a></li>
             <li><a href="UserQuizDashboard.aspx">Quiz & Assessments</a></li>
             <li><a href="UserIngredient.aspx">Ingredients</a></li>

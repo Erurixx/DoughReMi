@@ -22,10 +22,10 @@
                 <a href="Main Page After Logged In.aspx">DoughReMi</a>
             </div>
             <ul class="topnav">
-                <li><a href="#menu-recipe">Menu & Recipes</a></li>
-                <li><a href="#quiz-assessments">Quiz & Assessments</a></li>
-                <li><a href="#ingredients">Ingredients</a></li>
-                <li><a href="#forums">Forums</a></li>
+                <li><a href="#menu-recipe" >Menu & Recipes</a></li>
+                <li><a href="UserQuizDashboard.aspx">Quiz & Assessments</a></li>
+                <li><a href="UserIngredient.aspx">Ingredients</a></li>
+                <li><a href="UserForum.aspx">Forums</a></li>
                 <li><a href="#bookmark">Bookmark</a></li>
                 <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
             </ul>

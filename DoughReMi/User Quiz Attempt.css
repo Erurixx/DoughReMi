@@ -2,7 +2,7 @@
 
 .form-container {
     margin: 20px;
-    margin-bottom: 350px;
+    margin-bottom: 150px;
 }
 
 html {
@@ -104,7 +104,6 @@ nav {
     position: relative; /* Ensure relative positioning for absolute dropdown */
 }
 
-
 .profile-picture {
     width: 40px;
     height: 40px;
@@ -189,3 +188,51 @@ footer {
     border-top: 1px solid #444;
     line-height: 1.5rem;
 }
+
+/* Questions and Choices */
+.question {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .question:hover {
+        border-color: #fde047;
+    }
+
+    .question .aspLabel {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .question .aspRadioButtonList {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+        .question .aspRadioButtonList .aspListItem {
+            padding: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            cursor: pointer;
+        }
+
+            .question .aspRadioButtonList .aspListItem:hover {
+                background-color: #fdf4ab;
+                border-color: #fde047;
+            }
+
+            .question .aspRadioButtonList .aspListItem input[type="radio"] {
+                display: none;
+            }
+
+                .question .aspRadioButtonList .aspListItem input[type="radio"]:checked + label {
+                    background-color: #fde047;
+                    border-color: #ffd700;
+                }

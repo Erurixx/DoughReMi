@@ -53,7 +53,7 @@
                         </asp:ImageField>
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IngredientConnectionString %>" SelectCommand="SELECT [Name], [Description], [Image] FROM [indTable]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IngredientConnectionString %>" SelectCommand="SELECT [Name], [Description], [Image] FROM [indTable] ORDER BY [Name]"></asp:SqlDataSource>
             </p>
         </div>
 
