@@ -22,10 +22,10 @@
                 <a href="Main Page After Logged In.aspx">DoughReMi</a>
             </div>
             <ul class="topnav">
-                <li><a href="#menu-recipe" class="dropbutton">Menu & Recipes</a></li>
-                <li><a href="#quiz-assessments">Quiz & Assessments</a></li>
-                <li><a href="#ingredients">Ingredients</a></li>
-                <li><a href="#forums">Forums</a></li>
+                <li><a href="#menu-recipe" >Menu & Recipes</a></li>
+                <li><a href="UserQuizDashboard.aspx">Quiz & Assessments</a></li>
+                <li><a href="UserIngredient.aspx">Ingredients</a></li>
+                <li><a href="UserForum.aspx">Forums</a></li>
                 <li><a href="#bookmark">Bookmark</a></li>
                 <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
             </ul>
@@ -62,12 +62,10 @@
 
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <div class="button-container">
                                     <asp:Button ID="Attempt" runat="server" CommandArgument='<%# Eval("title") %>' Text="Attempt" CssClass="btn" OnClick="Attempt_Click" />
-                                </div>
                             </ItemTemplate>
-                            <ItemStyle Width="100px" />
-                            <HeaderStyle Width="100px" />
+                            <ItemStyle Width="50px" />
+                            <HeaderStyle Width="50px" />
                         </asp:TemplateField>
 
                     </Columns>
@@ -86,13 +84,13 @@
                         </asp:BoundField>
 
                         <asp:BoundField DataField="title" HeaderText="Quiz Title">
-                            <ItemStyle Width="400px" />
-                            <HeaderStyle Width="400px" />
+                            <ItemStyle Width="300px" />
+                            <HeaderStyle Width="300px" />
                         </asp:BoundField>
 
-                        <asp:BoundField DataField="score" HeaderText="Quiz Score">
-                            <ItemStyle Width="100px" />
-                            <HeaderStyle Width="100px" />
+                        <asp:BoundField DataField="score" HeaderText="Score">
+                            <ItemStyle Width="50px" />
+                            <HeaderStyle Width="50px" />
                         </asp:BoundField>
 
                     </Columns>

@@ -40,11 +40,14 @@ namespace DoughReMi
         private void LoadScore()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["QuizConnectionString"].ConnectionString;
-            
+            string usernameText = usernamelbl.Text.Replace("Hi, ", "").Trim();
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT username, title, score FROM Quizzes_Score WHERE username = @username";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.SelectCommand.Parameters.AddWithValue("@username", usernameText);
+
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
@@ -52,6 +55,7 @@ namespace DoughReMi
                 GridView2.DataBind();
             }
         }
+
 
         protected void Attempt_Click(object sender, EventArgs e)
         {

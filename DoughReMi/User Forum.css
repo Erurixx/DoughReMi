@@ -1,4 +1,9 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+﻿/* Reset default margin and padding for all elements */
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 html {
     scroll-behavior: smooth;
@@ -13,65 +18,91 @@ body {
     font-variation-settings: "slnt" 0;
 }
 
+/* Container styles */
 .container {
-    width: 80%;
-    margin: auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-    margin-bottom: 350px;
+    max-width: 800px;
+    margin: 0 auto; /* Center align container */
 }
 
-h1 {
-    text-align: center;
+/* Discussion Forum title */
+h2 {
     color: #333;
+    margin-bottom: 20px;
+    
 }
 
-p {
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.6;
+/* Styling for each post box */
+.post-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
 }
 
-.grid-view {
+/* Styling for post content */
+.post-content {
+    margin-bottom: 10px;
+}
+
+/* Styling for comments section */
+.comments {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Styling for each comment */
+.comment {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+    line-height: 1.5; /* Improved readability with slightly increased line height */
+}
+
+/* Styling for comment form */
+.comment-form {
+    margin-top: 10px;
+}
+
+/* Styling for text boxes */
+.custom-textbox {
     width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
+    max-width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
 }
 
-    .grid-view th, .grid-view td {
-        text-align: center;
-        padding: 10px;
-        border: 1px solid #ddd;
+/* Styling for buttons */
+.custom-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+    .custom-button:hover {
+        background-color: #0056b3;
     }
 
-    .grid-view th {
-        background-color: #FFD700; /* Yellow background for headers */
-        color: white;
-    }
+/* Additional styling for the post button */
+.post-button {
+    margin-top: 10px; /* Adds space between post form and button */
+}
 
-    .grid-view tr:nth-child(even) {
-        background-color: #f2f2f2; /* Light gray background for even rows */
-    }
-
-    .grid-view tr:hover {
-        background-color: #ddd; /* Darker background on hover */
-    }
-
-    .grid-view .description-column {
-        text-align: left; /* Align description column text to the left */
-    }
-
-    /* Styling for images in the GridView */
-    .grid-view img {
-        max-width: 100px;
-        max-height: 100px;
-        display: block;
-        margin: 0 auto;
-        border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    }
+/* Hide the 'Comment:' label */
+.comment p strong {
+    display: none;
+}
 
 /*Deskstop Navigation*/
 nav {
@@ -202,4 +233,19 @@ footer {
     line-height: 1.5rem;
 }
 
+/* Button */
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #fde047;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
+    .btn-primary:hover {
+        background-color: #FFEF64;
+    }

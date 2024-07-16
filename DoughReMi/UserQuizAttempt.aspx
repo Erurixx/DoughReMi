@@ -22,7 +22,7 @@
                 <a href="Main Page After Logged In.aspx">DoughReMi</a>
             </div>
             <ul class="topnav">
-                <li><a href="#menu-recipe" class="dropbutton">Menu & Recipes</a></li>
+                <li><a href="#menu-recipe">Menu & Recipes</a></li>
                 <li><a href="#quiz-assessments">Quiz & Assessments</a></li>
                 <li><a href="#ingredients">Ingredients</a></li>
                 <li><a href="#forums">Forums</a></li>

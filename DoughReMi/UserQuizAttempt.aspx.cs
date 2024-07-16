@@ -181,6 +181,7 @@ namespace DoughReMi
         {
             int totalQuestions = rptQuestions.Items.Count;
             int correctAnswers = 0;
+            
             bool allAnswered = true;
 
             foreach (RepeaterItem item in rptQuestions.Items)

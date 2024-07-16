@@ -17,31 +17,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav id="desktop-nav">
-            <div class="logo">
-                <a href="Main Page.aspx">DoughReMi</a>
-            </div>
-            <ul class="topnav">
-                <li><a href="#menu-recipe" class="dropbutton">Menu & Recipes</a></li>
-                <li><a href="#quiz-assessments">Quiz & Assessments</a></li>
-                <li><a href="#ingredients">Ingredients</a></li>
-                <li><a href="#forums">Forums</a></li>
-                <li><a href="#bookmark">Bookmark</a></li>
-                <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
-            </ul>
-        </nav>
 
-        <br />
-
-            <table>
-                <tr>
-                    <td>
-                        <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="btn" OnClick="Back_Click" />
-                    </td>
-                    <td>
-                    </td>
-                </tr>
-            </table>
+        <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="btn" OnClick="Back_Click" />
 
         <div class="dashboard-header">
             <h2>Admin Quiz Dashboard</h2>

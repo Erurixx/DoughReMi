@@ -191,9 +191,10 @@
     <Content Include="terms and condition.css" />
     <Content Include="User Profile.aspx" />
     <Content Include="User Profile New.css" />
-    <Content Include="UserForum.css" />
+    <Content Include="User Forum.css" />
     <Content Include="UserIngredient.aspx" />
     <Content Include="UserIngredient.css" />
+    <Content Include="UserIngredient.js" />
     <Content Include="UserQuizAttempt.aspx" />
     <Content Include="UserQuizAttempt.css" />
     <Content Include="UserQuizAttempt.js" />
