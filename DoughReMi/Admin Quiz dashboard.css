@@ -1,5 +1,6 @@
 ﻿.form-container {
     margin: 20px;
+    margin-bottom: 100px;
 }
 
 html {
@@ -15,13 +16,13 @@ body {
     font-variation-settings: "slnt" 0;
 }
 
-.dashboard-header {
+.page-title {
     text-align: center;
 }
 
-.dashboard-header h2 {
-     font-weight: bold; 
-}
+    .page-title h2 {
+        font-weight: bold;
+    }
 
 .quiz-table {
     width: 100%;
@@ -47,56 +48,17 @@ body {
 
 .btn {
     background-color: #fde047;
-    color: black;
-    padding: 0.5rem 2rem;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
     text-align: center;
     display: inline-block;
     font-size: 1rem;
-    margin: 4px 2px;
-    border-radius: 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
     .btn:hover {
         background-color: #FFEF64;
-        color: black;
-        transition: background-color 0.3s, color 0.3s;
     }
-
-/*Deskstop Navigation*/
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
-    padding: 0 2rem;
-}
-
-.topnav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
-    list-style: none;
-    font-size: 1rem;
-    flex: 1;
-}
-
-    .topnav a {
-        text-decoration: none;
-        color: black;
-    }
-
-        .topnav a:hover {
-            color: #E8D10D;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-
-
-.logo a {
-    margin-left: 2rem;
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
-}

@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminForum.aspx.cs" Inherits="DoughReMi.AdminForum" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin Forum.aspx.cs" Inherits="DoughReMi.AdminForum" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Admin Panel</title>
-    <link rel="stylesheet" type="text/css" href="AdminForum.css" />
+    <link rel="stylesheet" type="text/css" href="Admin Forum.css" />
 </head>
 <body>
     <form id="form1" runat="server">

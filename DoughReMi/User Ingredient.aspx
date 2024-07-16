@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserIngredient.aspx.cs" Inherits="DoughReMi.UserIngredient" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User Ingredient.aspx.cs" Inherits="DoughReMi.UserIngredient" %>
 
 
 <!DOCTYPE html>
@@ -6,9 +6,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="UserIngredient.css" />
-    
-    <script src="UserIngredient.js"></script>
+    <link rel="stylesheet" type="text/css" href="User Ingredient.css" />
+    <script src="User Ingredient.js"></script>
    
 </head>
 <body>
@@ -18,10 +17,10 @@
                 <a href="Main Page After Logged In.aspx">DoughReMi</a>
             </div>
             <ul class="topnav">
-                <li><a href="#menu-recipe" >Menu & Recipes</a></li>
-                <li><a href="UserQuizDashboard.aspx">Quiz & Assessments</a></li>
-                <li><a href="UserIngredient.aspx">Ingredients</a></li>
-                <li><a href="UserForum.aspx">Forums</a></li>
+                <li><a href="#menu-recipe">Menu & Recipes</a></li>
+                <li><a href="User Quiz Dashboard.aspx">Quiz & Assessments</a></li>
+                <li><a href="User Ingredient.aspx">Ingredients</a></li>
+                <li><a href="User Forum.aspx">Forums</a></li>
                 <li><a href="#bookmark">Bookmark</a></li>
                 <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
             </ul>

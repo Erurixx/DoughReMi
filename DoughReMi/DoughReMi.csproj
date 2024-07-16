@@ -106,17 +106,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin Quiz View.aspx" />
+    <Content Include="Admin Quiz View.css" />
     <Content Include="Admin.css" />
     <Content Include="Add Admin.aspx" />
     <Content Include="Admin Main Page.aspx" />
-    <Content Include="AdminForum.aspx" />
-    <Content Include="AdminForum.css" />
-    <Content Include="AdminQuizAdd.aspx" />
+    <Content Include="Admin Forum.aspx" />
+    <Content Include="Admin Forum.css" />
+    <Content Include="Admin Quiz Add.aspx" />
     <Content Include="Admin Quiz Add.css" />
-    <Content Include="AdminQuizDashboard.aspx" />
-    <Content Include="AdminQuizDashboard.css" />
-    <Content Include="AdminQuizEdit.aspx" />
-    <Content Include="AdminQuizEdit.css" />
+    <Content Include="Admin Quiz Dashboard.aspx" />
+    <Content Include="Admin Quiz Edit.aspx" />
+    <Content Include="Admin Quiz Edit.css" />
+    <Content Include="Admin Quiz dashboard.css" />
     <Content Include="App_Data\Register.mdf" />
     <Content Include="App_Data\Register_log.ldf">
       <DependentUpon>Register.mdf</DependentUpon>
@@ -141,10 +143,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="UserForum.aspx" />
+    <Content Include="User Forum.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="AdminInd.aspx" />
-    <Content Include="AdminInd.css" />
+    <Content Include="Admin Ingredient.aspx" />
+    <Content Include="Admin Ingredient.css" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="Main Page After Logged In.aspx" />
@@ -192,15 +194,15 @@
     <Content Include="User Profile.aspx" />
     <Content Include="User Profile New.css" />
     <Content Include="User Forum.css" />
-    <Content Include="UserIngredient.aspx" />
-    <Content Include="UserIngredient.css" />
-    <Content Include="UserIngredient.js" />
-    <Content Include="UserQuizAttempt.aspx" />
+    <Content Include="User Ingredient.aspx" />
+    <Content Include="User Ingredient.css" />
+    <Content Include="User Ingredient.js" />
+    <Content Include="User Quiz Attempt.aspx" />
     <Content Include="User Quiz Attempt.css" />
-    <Content Include="UserQuizAttempt.js" />
-    <Content Include="UserQuizDashboard.aspx" />
-    <Content Include="UserquizDashboard.css" />
-    <Content Include="UserquizDashboard.js" />
+    <Content Include="User Quiz Attempt.js" />
+    <Content Include="User Quiz Dashboard.aspx" />
+    <Content Include="User Quiz Dashboard.css" />
+    <Content Include="User Quiz Dashboard.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -227,33 +229,40 @@
     <Compile Include="Admin Main Page.aspx.designer.cs">
       <DependentUpon>Admin Main Page.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminForum.aspx.cs">
-      <DependentUpon>AdminForum.aspx</DependentUpon>
+    <Compile Include="Admin Forum.aspx.cs">
+      <DependentUpon>Admin Forum.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminForum.aspx.designer.cs">
-      <DependentUpon>AdminForum.aspx</DependentUpon>
+    <Compile Include="Admin Forum.aspx.designer.cs">
+      <DependentUpon>Admin Forum.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminQuizAdd.aspx.cs">
-      <DependentUpon>AdminQuizAdd.aspx</DependentUpon>
+    <Compile Include="Admin Quiz Add.aspx.cs">
+      <DependentUpon>Admin Quiz Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminQuizAdd.aspx.designer.cs">
-      <DependentUpon>AdminQuizAdd.aspx</DependentUpon>
+    <Compile Include="Admin Quiz Add.aspx.designer.cs">
+      <DependentUpon>Admin Quiz Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminQuizDashboard.aspx.cs">
-      <DependentUpon>AdminQuizDashboard.aspx</DependentUpon>
+    <Compile Include="Admin Quiz Dashboard.aspx.cs">
+      <DependentUpon>Admin Quiz Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminQuizDashboard.aspx.designer.cs">
-      <DependentUpon>AdminQuizDashboard.aspx</DependentUpon>
+    <Compile Include="Admin Quiz Dashboard.aspx.designer.cs">
+      <DependentUpon>Admin Quiz Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminQuizEdit.aspx.cs">
-      <DependentUpon>AdminQuizEdit.aspx</DependentUpon>
+    <Compile Include="Admin Quiz Edit.aspx.cs">
+      <DependentUpon>Admin Quiz Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminQuizEdit.aspx.designer.cs">
-      <DependentUpon>AdminQuizEdit.aspx</DependentUpon>
+    <Compile Include="Admin Quiz Edit.aspx.designer.cs">
+      <DependentUpon>Admin Quiz Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Quiz View.aspx.cs">
+      <DependentUpon>Admin Quiz View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Quiz View.aspx.designer.cs">
+      <DependentUpon>Admin Quiz View.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -295,12 +304,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="AdminInd.aspx.cs">
-      <DependentUpon>AdminInd.aspx</DependentUpon>
+    <Compile Include="Admin Ingredient.aspx.cs">
+      <DependentUpon>Admin Ingredient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminInd.aspx.designer.cs">
-      <DependentUpon>AdminInd.aspx</DependentUpon>
+    <Compile Include="Admin Ingredient.aspx.designer.cs">
+      <DependentUpon>Admin Ingredient.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -373,26 +382,26 @@
     <Compile Include="User Profile.aspx.designer.cs">
       <DependentUpon>User Profile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserIngredient.aspx.cs">
-      <DependentUpon>UserIngredient.aspx</DependentUpon>
+    <Compile Include="User Ingredient.aspx.cs">
+      <DependentUpon>User Ingredient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserIngredient.aspx.designer.cs">
-      <DependentUpon>UserIngredient.aspx</DependentUpon>
+    <Compile Include="User Ingredient.aspx.designer.cs">
+      <DependentUpon>User Ingredient.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserQuizAttempt.aspx.cs">
-      <DependentUpon>UserQuizAttempt.aspx</DependentUpon>
+    <Compile Include="User Quiz Attempt.aspx.cs">
+      <DependentUpon>User Quiz Attempt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserQuizAttempt.aspx.designer.cs">
-      <DependentUpon>UserQuizAttempt.aspx</DependentUpon>
+    <Compile Include="User Quiz Attempt.aspx.designer.cs">
+      <DependentUpon>User Quiz Attempt.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserQuizDashboard.aspx.cs">
-      <DependentUpon>UserQuizDashboard.aspx</DependentUpon>
+    <Compile Include="User Quiz Dashboard.aspx.cs">
+      <DependentUpon>User Quiz Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserQuizDashboard.aspx.designer.cs">
-      <DependentUpon>UserQuizDashboard.aspx</DependentUpon>
+    <Compile Include="User Quiz Dashboard.aspx.designer.cs">
+      <DependentUpon>User Quiz Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -401,12 +410,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserForum.aspx.cs">
-      <DependentUpon>UserForum.aspx</DependentUpon>
+    <Compile Include="User Forum.aspx.cs">
+      <DependentUpon>User Forum.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserForum.aspx.designer.cs">
-      <DependentUpon>UserForum.aspx</DependentUpon>
+    <Compile Include="User Forum.aspx.designer.cs">
+      <DependentUpon>User Forum.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

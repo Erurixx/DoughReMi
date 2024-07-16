@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminQuizEdit.aspx.cs" Inherits="WAPP_Assignment.Assignment.AdminQuizEdit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin Quiz Edit.aspx.cs" Inherits="WAPP_Assignment.Assignment.AdminQuizEdit" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Edit Quiz</title>
-    <link rel="stylesheet" type="text/css" href="AdminQuizEdit.css" />
+    <link rel="stylesheet" type="text/css" href="Admin Quiz Edit.css" />
     <style type="text/css">
         .auto-style1 {
             width: 865px;
@@ -333,10 +333,6 @@
                     <td class="auto-style1">
                         <asp:Button ID="Update" runat="server" Text="Update" OnClick="Update_Click" ValidationGroup="UpdateGroup" />
                     </td>
-                </tr>
-                <tr>
-                    <td class="auto-style3" colspan="2">
-                        &nbsp;</td>
                 </tr>
             </table>
         </div>

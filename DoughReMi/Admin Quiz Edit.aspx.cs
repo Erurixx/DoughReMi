@@ -22,7 +22,7 @@ namespace WAPP_Assignment.Assignment
 
         private void LoadQuizDetails(string quizTitle)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["QuizConnectionString"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -78,7 +78,7 @@ namespace WAPP_Assignment.Assignment
         {
             string quizTitle = Request.QueryString["title"];
 
-            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["QuizConnectionString"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -135,13 +135,13 @@ namespace WAPP_Assignment.Assignment
                 }
             }
 
-            string script = "alert('Quiz updated successful!'); window.location='AdminQuizDashboard.aspx';";
+            string script = "alert('Quiz updated successful!'); window.location='Admin Quiz Dashboard.aspx';";
             ScriptManager.RegisterStartupScript(this, GetType(), "UpdateAlert", script, true);
         }
 
         protected void Cancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AdminQuizDashboard.aspx");
+            Response.Redirect("Admin Quiz Dashboard.aspx");
         }
     }
 }

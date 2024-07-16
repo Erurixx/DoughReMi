@@ -43,7 +43,7 @@
                     <span class="label">Content Management</span>
                     <ul class="list-unstyled">
                         <li>
-                            <asp:HyperLink ID="HyperLinkManageQuiz" runat="server" NavigateUrl="#manage-quiz">Manage Quiz &amp; Assessments</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLinkManageQuiz" runat="server" NavigateUrl="Admin Quiz Dashboard.aspx">Manage Quiz &amp; Assessments</asp:HyperLink>
                         </li>
                         <li>
                             <asp:HyperLink ID="HyperLinkManageForums" runat="server" NavigateUrl="#manage-forums">Manage Discussion Forums</asp:HyperLink>

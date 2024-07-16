@@ -1,0 +1,71 @@
+﻿.form-container {
+    border: 1px solid #ccc;
+    margin: 20px;
+    margin-bottom: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F9F9F9;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .page-title h2 {
+        font-weight: bold;
+    }
+
+.title-label, .difficulty-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.question-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.question-label, .choices-label, .answer-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.choices-container {
+    margin-left: 20px;
+}
+
+.choice-label {
+    font-weight: normal;
+}
+
+.back-button {
+    background-color: #fde047;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .back-button:hover {
+        background-color: #FFEF64;
+    }

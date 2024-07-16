@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserQuizAttempt.aspx.cs" Inherits="DoughReMi.UserQuizAttempt" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User Quiz Attempt.aspx.cs" Inherits="DoughReMi.UserQuizAttempt" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
     <!-- Body Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
     <script src="https://kit.fontawesome.com/014d9f8d85.js" crossorigin="anonymous"></script>
-    <script src="UserQuizAttempt.js"></script>
+    <script src="User Quiz Attempt.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -21,9 +21,9 @@
             </div>
             <ul class="topnav">
                 <li><a href="#menu-recipe">Menu & Recipes</a></li>
-                <li><a href="UserQuizDashboard.aspx">Quiz & Assessments</a></li>
-                <li><a href="UserIngredient.aspx">Ingredients</a></li>
-                <li><a href="UserForum.aspx">Forums</a></li>
+                <li><a href="User Quiz Dashboard.aspx">Quiz & Assessments</a></li>
+                <li><a href="User Ingredient.aspx">Ingredients</a></li>
+                <li><a href="User Forum.aspx">Forums</a></li>
                 <li><a href="#bookmark">Bookmark</a></li>
                 <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
             </ul>

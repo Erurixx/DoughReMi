@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminQuizAdd.aspx.cs" Inherits="WAPP_Assignment.Assignment.AdminQuizAdd" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin Quiz Add.aspx.cs" Inherits="WAPP_Assignment.Assignment.AdminQuizAdd" %>
 
 <!DOCTYPE html>
 

@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace DoughReMi
 {
-    public partial class AdminInd : System.Web.UI.Page
+    public partial class AdminIngredient : System.Web.UI.Page
     {
 
         protected void Page_Load(object sender, EventArgs e)

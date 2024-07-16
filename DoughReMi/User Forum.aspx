@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserForum.aspx.cs" Inherits="DoughReMi.UserForum" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User Forum.aspx.cs" Inherits="DoughReMi.UserForum" %>
 
 <!DOCTYPE html>
 
@@ -22,10 +22,10 @@
                 <a href="Main Page After Logged In.aspx">DoughReMi</a>
             </div>
             <ul class="topnav">
-                <li><a href="#menu-recipe" >Menu & Recipes</a></li>
-                <li><a href="UserQuizDashboard.aspx">Quiz & Assessments</a></li>
-                <li><a href="UserIngredient.aspx">Ingredients</a></li>
-                <li><a href="UserForum.aspx">Forums</a></li>
+                <li><a href="#menu-recipe">Menu & Recipes</a></li>
+                <li><a href="User Quiz Dashboard.aspx">Quiz & Assessments</a></li>
+                <li><a href="User Ingredient.aspx">Ingredients</a></li>
+                <li><a href="User Forum.aspx">Forums</a></li>
                 <li><a href="#bookmark">Bookmark</a></li>
                 <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
             </ul>

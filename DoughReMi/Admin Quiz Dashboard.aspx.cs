@@ -35,14 +35,21 @@ namespace DoughReMi
 
         protected void AddQuiz_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AdminQuizAdd.aspx");
+            Response.Redirect("Admin Quiz Add.aspx");
         }
 
         protected void Edit_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             string quizTitle = btn.CommandArgument;
-            Response.Redirect("AdminQuizEdit.aspx?title=" + quizTitle);
+            Response.Redirect("Admin Quiz Edit.aspx?title=" + quizTitle);
+        }
+
+        protected void View_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            string quizTitle = btn.CommandArgument;
+            Response.Redirect("Admin Quiz View.aspx?title=" + quizTitle);
         }
 
         protected void Delete_Click(object sender, EventArgs e)

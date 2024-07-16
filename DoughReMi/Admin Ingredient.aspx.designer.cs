@@ -11,7 +11,7 @@ namespace DoughReMi
 {
 
 
-    public partial class AdminInd
+    public partial class AdminIngredient
     {
 
         /// <summary>
