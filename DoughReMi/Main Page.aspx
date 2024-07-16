@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DoughReMi Main Page</title>
+    <link rel="icon" href="assets\company-logo 32x32.jpeg" type="image/x-icon" />
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <script src="Main Page.js"></script>
@@ -35,14 +36,14 @@
             <li><a href="#ingredients">Ingredients</a></li>
             
             
-            <li><a href="#terms-condition">Terms and Condition</a></li>
+            <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
         </ul>
 
         <div class="register-button">
-            <a href=RegisterNew.aspx>Register</a>
+            <a href="RegisterNew.aspx">Register</a>
         </div>
         <div class="login-button">
-            <a href=Login.aspx class="button">Login</a>
+            <a href="Login.aspx" class="button">Login</a>
         </div>
     </nav>
 

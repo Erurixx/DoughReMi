@@ -59,7 +59,7 @@ namespace DoughReMi
 
             string loginIdentifier = Session["storeUsername"]?.ToString();
             string query = "SELECT fname, lname, email, userName, gender, imageURL FROM Register WHERE userName = @loginIdentifier OR email = @loginIdentifier";
-            // Example: Retrieve user profile data based on user ID or session
+           
 
 
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString))
@@ -112,7 +112,12 @@ namespace DoughReMi
                 }
 
 
-
+                // Validate email format
+                if (!IsValidEmail(txtEmail.Text.Trim()))
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Please enter a valid email address.');", true);
+                    return; // Exit the method if email is invalid
+                }
 
 
 
@@ -258,6 +263,18 @@ namespace DoughReMi
             Response.Redirect("Main Page After Logged In.aspx");
         }
 
+        // Function to validate email format
+        private bool IsValidEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            // Check for '@' symbol and 'gmail.com' domain
+            if (!email.Contains("@") || !email.EndsWith("@gmail.com"))
+                return false;
+
+            return true;
+        }
     }
 }
 

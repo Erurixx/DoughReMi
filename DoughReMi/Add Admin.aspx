@@ -7,6 +7,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Add Admin</title>
+    <link rel="icon" href="assets\company-logo 32x32.jpeg" type="image/x-icon" />
     <link rel="stylesheet" href="User Profile New.css"/>
      
     

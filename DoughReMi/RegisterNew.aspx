@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DoughReMi Register Page</title>
+    <link rel="icon" href="assets\company-logo 32x32.jpeg" type="image/x-icon" />
     <link rel="stylesheet" href="RegisterNew.css" /> 
 </head>
 <body>

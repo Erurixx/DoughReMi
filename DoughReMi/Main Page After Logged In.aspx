@@ -5,8 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DoughReMi Main Page</title>
+    <link rel="icon" href="assets\company-logo 32x32.jpeg" type="image/x-icon" />
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <script src="Main Page.js"></script>
     
     <!-- Others -->
     <link rel="stylesheet" href="MPAL New.css" />
@@ -17,9 +19,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
     <script src="https://kit.fontawesome.com/014d9f8d85.js" crossorigin="anonymous"></script>
-    <style type="text/css">
-        
-    </style>
+    
 </head>
 
 <body>
@@ -173,8 +173,8 @@
             <p>&copy; 2024 DoughReMi. All rights reserved.</p>
         </div>
     </footer>
-     
-    <script src ="Main Page After Logged In.js"></script>
+     <script src="Main Page After Logged In.js"></script>
+    
     </form>
 
 </body>

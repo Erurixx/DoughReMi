@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
+    <link rel="icon" href="assets\company-logo 32x32.jpeg" type="image/x-icon" />
     <link rel="stylesheet" href="Admin.css" />
     <style type="text/css">
         .company-logo {
@@ -56,7 +57,7 @@
                     </ul>
                 </li>
                 
-                <!-- Add more sections as needed -->
+                
                 
             </ul>    
         </nav>
@@ -74,10 +75,18 @@
             <!-- Main Content Area -->
             <div class="main-content">
                 <!-- Your main content goes here -->
-                <!-- For example, display some widgets or information -->
                 <h2>Welcome to Your Admin Dashboard</h2>
                 <p>This is where you can manage users, content, and more.</p>
             </div>
+
+            <!-- Info Boxes -->
+                <div class="info-boxes">
+                    <div class="info-box">
+                        <h3>Registered Users</h3>
+                        <asp:Label ID="lblRegisteredUsers" runat="server" CssClass="info-number"></asp:Label>
+                    </div>
+                    
+                </div>
         </div>
     </form>
 </body>

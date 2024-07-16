@@ -17,6 +17,7 @@ namespace DoughReMi
             {
                 LoadUserProfile();
                 LoadProfilePicture();
+                LoadDashboardData();
             }
         }
 
@@ -72,6 +73,24 @@ namespace DoughReMi
                     }
                     conn.Close();
                 }
+            }
+        }
+
+        private void LoadDashboardData()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["RegisterConnectionString"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                // Fetch registered users count
+                string registeredUsersQuery = "SELECT COUNT(*) FROM Register";
+                SqlCommand registeredUsersCmd = new SqlCommand(registeredUsersQuery, con);
+                int registeredUsersCount = (int)registeredUsersCmd.ExecuteScalar();
+                lblRegisteredUsers.Text = registeredUsersCount.ToString();
+
+               
             }
         }
     }

@@ -99,3 +99,46 @@ body {
 .profile-picture {
     border-radius: 50%;
 }
+
+/* Info Boxes */
+.info-boxes {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width:20px; /* Adjust max width as needed */
+    padding-top:50px;
+    margin-left: 110px;
+}
+
+.info-box {
+    flex: 1;
+    min-width: 200px;
+    background-color: #FFF;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.info-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info-box .info-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.main-content {
+    
+    text-align: center; /* Center the text elements */
+}
+
+.main-content h2,
+.main-content p {
+    margin: auto;
+}

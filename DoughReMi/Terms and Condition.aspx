@@ -4,7 +4,7 @@
 <html>
 <head runat="server">
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon">
+    <link rel="icon" href="assets\company-logo 32x32.jpeg" type="image/x-icon" />
     <title>Terms & Conditions</title>
     <link rel="stylesheet" href="terms and condition.css">
     <link rel="stylesheet" href="User Profile New.css">

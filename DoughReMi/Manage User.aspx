@@ -5,12 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Manage Users</title>
+    <link rel="icon" href="assets\company-logo 32x32.jpeg" type="image/x-icon" />
     <link rel="stylesheet" href="ManageContent.css" />
     <link rel="stylesheet" href="User Profile New.css"/>
     <link rel="stylesheet" href="Main Page.css" />
-    <style type="text/css">
-        
-    </style>
+    
 </head>
 <body>
     <form id="form1" runat="server">
