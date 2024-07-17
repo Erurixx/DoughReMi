@@ -1,0 +1,251 @@
+﻿/* Reset default margin and padding for all elements */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F9F9F9;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center align container */
+}
+
+/* Discussion Forum title */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    
+}
+
+/* Styling for each post box */
+.post-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+/* Styling for post content */
+.post-content {
+    margin-bottom: 10px;
+}
+
+/* Styling for comments section */
+.comments {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Styling for each comment */
+.comment {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+    line-height: 1.5; /* Improved readability with slightly increased line height */
+}
+
+/* Styling for comment form */
+.comment-form {
+    margin-top: 10px;
+}
+
+/* Styling for text boxes */
+.custom-textbox {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+/* Styling for buttons */
+.custom-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+    .custom-button:hover {
+        background-color: #0056b3;
+    }
+
+/* Additional styling for the post button */
+.post-button {
+    margin-top: 10px; /* Adds space between post form and button */
+}
+
+/* Hide the 'Comment:' label */
+.comment p strong {
+    display: none;
+}
+
+/*Deskstop Navigation*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+    font-size: 1rem;
+    flex: 1;
+}
+
+    .topnav a {
+        text-decoration: none;
+        color: black;
+    }
+
+        .topnav a:hover {
+            color: #E8D10D;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+.logo a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    position: relative; /* Ensure relative positioning for absolute dropdown */
+}
+
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.username {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust this value as needed */
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.profile:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+    .dropdown-content a:hover {
+        background-color: #FFEF64;
+    }
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+    .profile-picture:hover {
+        transform: scale(1.1);
+    }
+
+/* Footer */
+footer {
+    background-color: #fde047;
+    color: black;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 1rem;
+}
+
+.footer-section {
+    line-height: 1.5rem;
+}
+
+.footer-bottom {
+    margin-top: 1.5rem;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #444;
+    line-height: 1.5rem;
+}
+
+/* Button */
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #fde047;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #FFEF64;
+    }

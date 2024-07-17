@@ -29,11 +29,11 @@
         </div>
         <ul class="topnav">
             <li class="dropdown">
-                <a href="#menu-recipe" class="dropbutton">Menu & Recipes</a>    
+                <a href="#menu-recipe">Menu & Recipes</a>    
             </li>
 
             
-            <li><a href="#ingredients">Ingredients</a></li>
+            <li><a href="User Ingredient.aspx">Ingredients</a></li>
             
             
             <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>

@@ -29,15 +29,12 @@
     <nav id="desktop-nav">
         <div class="logo">
             <a href="Main Page.aspx">DoughReMi</a>
-
         </div>
         <ul class="topnav">
-            
-
-            <li><a href="#menu-recipe" class="dropbutton">Menu & Recipes</a></li>
-            <li><a href="UserQuizDashboard.aspx">Quiz & Assessments</a></li>
-            <li><a href="#ingredients">Ingredients</a></li>
-            <li><a href="#forums">Forums</a></li>
+            <li><a href="#menu-recipe">Menu & Recipes</a></li>
+            <li><a href="User Quiz Dashboard.aspx">Quiz & Assessments</a></li>
+            <li><a href="User Ingredient.aspx">Ingredients</a></li>
+            <li><a href="User Forum.aspx">Forums</a></li>
             <li><a href="#bookmark">Bookmark</a></li>
             <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
         </ul>
