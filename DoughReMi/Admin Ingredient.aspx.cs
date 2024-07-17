@@ -14,6 +14,7 @@ namespace DoughReMi
     public partial class AdminIngredient : System.Web.UI.Page
     {
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -64,10 +65,10 @@ namespace DoughReMi
             TextBox textDescription = (TextBox)row.FindControl("TextBox2");
             FileUpload fu = (FileUpload)row.FindControl("FileUpload1");
 
+            // Generate a unique filename
             Random rand = new Random((int)DateTime.Now.Ticks);
             int numIterations = rand.Next(1, 1000);
 
-            //file upload 
             string link = "";
             if (fu.HasFile)
             {
@@ -93,11 +94,10 @@ namespace DoughReMi
 
             con.Close();
 
-            //exit and update data
+            // Exit edit mode and refresh data
             GridView1.EditIndex = -1;
             Bind();
         }
-
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
@@ -106,7 +106,7 @@ namespace DoughReMi
 
             Label labelID = (Label)row.FindControl("Label1");
 
-            // delete by id
+            // Delete by ID
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["IngredientConnectionString"].ConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand("DELETE FROM indTable WHERE ID=@ID", con);
@@ -117,44 +117,63 @@ namespace DoughReMi
             Bind();
         }
 
-        protected void Button1_Click(object sender, EventArgs e) //new ing save button
+        protected void Button1_Click(object sender, EventArgs e) //save button
         {
             if (FileUpload2.HasFile)
             {
-                try
+                // Define allowed file extensions
+                string[] allowedExtensions = { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                string fileExtension = Path.GetExtension(FileUpload2.FileName).ToLower();
+
+                // Check if the selected file is an allowed image type
+                if (Array.Exists(allowedExtensions, ext => ext == fileExtension))
                 {
-                    // Generate a unique filename
-                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(FileUpload2.FileName);
-                    string filePath = Server.MapPath("~/assets/") + fileName;
+                    try
+                    {
+                        // Generate a unique filename
+                        string fileName = Guid.NewGuid().ToString() + fileExtension;
+                        string filePath = Server.MapPath("~/assets/") + fileName;
 
-                    // Save the file to the server
-                    FileUpload2.SaveAs(filePath);
+                        // Save the file to the server
+                        FileUpload2.SaveAs(filePath);
 
-                    // Insert into database
-                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["IngredientConnectionString"].ConnectionString);
-                    con.Open();
+                        // Insert into database
+                        using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["IngredientConnectionString"].ConnectionString))
+                        {
+                            con.Open();
+                            string insertQuery = "INSERT INTO indTable (Name, Description, Image) VALUES (@Name, @Description, @Image)";
+                            SqlCommand cmd = new SqlCommand(insertQuery, con);
+                            cmd.Parameters.AddWithValue("@Name", TextBox3.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Description", TextBox4.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Image", "assets/" + fileName); // Assuming assets folder structure
 
-                    string insertQuery = "INSERT INTO indTable (Name, Description, Image) VALUES (@Name, @Description, @Image)";
-                    SqlCommand cmd = new SqlCommand(insertQuery, con);
-                    cmd.Parameters.AddWithValue("@Name", TextBox3.Text);
-                    cmd.Parameters.AddWithValue("@Description", TextBox4.Text);
-                    cmd.Parameters.AddWithValue("@Image", "assets/" + fileName); // Assuming assets folder structure
+                            cmd.ExecuteNonQuery();
+                        }
 
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                        // Clear form fields
+                        TextBox3.Text = "";
+                        TextBox4.Text = "";
+                        successMsg.Text = "Ingredient added successfully!";
+                        successMsg.Visible = true;
+                        errMsg.Visible = false;
 
-                    TextBox3.Text = "";
-                    TextBox4.Text = "";
-                    successMsg.Text = "Ingredient added successfully!";
-                    successMsg.Visible = true;
-
-                    Bind(); // Refresh GridView
+                        // Refresh GridView
+                        Bind();
+                    }
+                    catch (Exception ex)
+                    {
+                        // Display error message if upload or database insertion fails
+                        errMsg.Text = "Error: " + ex.Message;
+                        errMsg.Visible = true;
+                        successMsg.Visible = false;
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    // Display error message if upload or database insertion fails
-                    errMsg.Text = "Error: " + ex.Message;
+                    // Display message if the selected file is not an allowed image type
+                    errMsg.Text = "Only image files (jpg, jpeg, png, gif, bmp) are allowed.";
                     errMsg.Visible = true;
+                    successMsg.Visible = false;
                 }
             }
             else
@@ -162,14 +181,17 @@ namespace DoughReMi
                 // Display message if no file selected
                 errMsg.Text = "Please select a file!";
                 errMsg.Visible = true;
+                successMsg.Visible = false;
             }
         }
-
 
         protected void back_Click1(object sender, EventArgs e)
         {
             Response.Redirect("Admin Main Page.aspx");
 
         }
+
+
+
     }
 }
