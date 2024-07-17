@@ -47,20 +47,20 @@ p {
     }
 
     .grid-view th {
-        background-color: #FFD700; /* Yellow background for headers */
+        background-color: #FFD700; 
         color: white;
     }
 
     .grid-view tr:nth-child(even) {
-        background-color: #f2f2f2; /* Light gray background for even rows */
+        background-color: #f2f2f2; 
     }
 
     .grid-view tr:hover {
-        background-color: #ddd; /* Darker background on hover */
+        background-color: #ddd; 
     }
 
     .grid-view .description-column {
-        text-align: left; /* Align description column text to the left */
+        text-align: left; /
     }
 
     /* Styling for images in the GridView */

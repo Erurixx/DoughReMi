@@ -7,10 +7,19 @@
     <title>Ingredients Form</title>
     <link rel="stylesheet" type="text/css" href="Admin Ingredient.css" />
  
+    <style type="text/css">
+        .auto-style1 {
+            text-align: left;
+        }
+    </style>
+ 
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="container">
+            <h1 class="auto-style1">
+                <asp:Button ID="back" runat="server" CssClass="back-btn" OnClick="back_Click1" Text="Back" />
+            </h1>
             <h1>Ingredients Form</h1>
             <!-- Error message label -->
             <table class="form-table">

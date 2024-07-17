@@ -72,13 +72,13 @@ namespace WAPP_Assignment.Assignment
             }
 
             // Register the JavaScript to show the success message and redirect
-            string script = "alert('Quiz added successful!'); window.location='AdminQuizDashboard.aspx';";
+            string script = "alert('Quiz added successful!'); window.location='Admin Quiz Dashboard.aspx';";
             ScriptManager.RegisterStartupScript(this, GetType(), "AddAlert", script, true);
         }
 
         protected void Cancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AdminQuizDashboard.aspx");
+            Response.Redirect("Admin Quiz Dashboard.aspx");
         }
     }
 }

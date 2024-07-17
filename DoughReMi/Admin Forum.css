@@ -1,4 +1,23 @@
-﻿/* Container for the admin panel */
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F9F9F9;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+
+/* Container for the admin panel */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -6,7 +25,7 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: "Times New Roman", serif;
+    font-family: "Inter", sans-serif;
 }
 
     /* Heading */
@@ -16,7 +35,7 @@
         color: #333;
     }
 
-/* Post box */
+/* the box for post */
 .admin-post-box {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -25,21 +44,21 @@
     background-color: #fff;
 }
 
-/* Post content */
+/* word of Post content */
 .admin-post-content p {
     font-size: 18px;
     color: #333;
     margin: 0 0 10px 0;
 }
 
-/* Comments section */
+/* word of comment*/
 .admin-comments h4 {
     font-size: 16px;
     color: #666;
     margin: 10px 0;
 }
 
-/* Comment box */
+/* the box for comment*/
 .admin-comment-box {
     background-color: #f1f1f1;
     padding: 10px;
@@ -47,14 +66,14 @@
     margin: 5px 0;
 }
 
-    .admin-comment-box p {
-        font-size: 14px;
-        color: #555;
-    }
+.admin-comment-box p {
+    font-size: 14px;
+    color: #555;
+}
 
 /* Buttons */
 .custom-button {
-    background-color: #007bff;
+    background-color: #fde047;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -67,3 +86,14 @@
     .custom-button:hover {
         background-color: #0056b3;
     }
+
+.back-btn {
+    background-color: #fde047;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    .back-btn:hover {
+        background-color: #45a049;

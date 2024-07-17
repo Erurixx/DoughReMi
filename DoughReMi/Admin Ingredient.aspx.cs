@@ -67,6 +67,7 @@ namespace DoughReMi
             Random rand = new Random((int)DateTime.Now.Ticks);
             int numIterations = rand.Next(1, 1000);
 
+            //file upload 
             string link = "";
             if (fu.HasFile)
             {
@@ -116,7 +117,7 @@ namespace DoughReMi
             Bind();
         }
 
-        protected void Button1_Click(object sender, EventArgs e) //save button
+        protected void Button1_Click(object sender, EventArgs e) //new ing save button
         {
             if (FileUpload2.HasFile)
             {
@@ -162,6 +163,13 @@ namespace DoughReMi
                 errMsg.Text = "Please select a file!";
                 errMsg.Visible = true;
             }
+        }
+
+
+        protected void back_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin Main Page.aspx");
+
         }
     }
 }

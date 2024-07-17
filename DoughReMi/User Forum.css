@@ -59,7 +59,7 @@ h2 {
     border-radius: 4px;
     padding: 8px;
     margin-bottom: 10px;
-    line-height: 1.5; /* Improved readability with slightly increased line height */
+    line-height: 1.5; 
 }
 
 /* Styling for comment form */
@@ -94,9 +94,9 @@ h2 {
         background-color: #0056b3;
     }
 
-/* Additional styling for the post button */
+
 .post-button {
-    margin-top: 10px; /* Adds space between post form and button */
+    margin-top: 10px; 
 }
 
 /* Hide the 'Comment:' label */

@@ -51,7 +51,7 @@
                 <br />
             </div>
 
-            <!-- Repeater for displaying posts -->
+            <!--Repeater for displaying posts -->
             <asp:Repeater ID="RptPosts" runat="server" OnItemDataBound="RptPosts_ItemDataBound">
                 <ItemTemplate>
                     <div class="post-box">
