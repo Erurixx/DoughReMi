@@ -101,6 +101,13 @@ namespace DoughReMi
                 if (fuProfilePic.HasFile)
                 {
                     string filename = Path.GetFileName(fuProfilePic.FileName);
+                    string extension = Path.GetExtension(filename).ToLower();
+                    if (extension != ".jpg" && extension != ".jpeg" && extension != ".png")
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Only JPG, JPEG, and PNG files are allowed.');", true);
+                        return; // Exit the method if the file is not in the allowed format
+                    }
+                    
                     string folderPath = Server.MapPath("/UploadedImages/");
                     if (!Directory.Exists(folderPath))
                     {
