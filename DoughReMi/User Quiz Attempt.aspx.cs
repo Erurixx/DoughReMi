@@ -208,7 +208,7 @@ namespace DoughReMi
                 SaveScore(username.Text, lblQuizTitle.Text, scoreValue);
 
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", $"alert('Your score is: {scoreValue}');", true);
-                Response.Redirect("UserQuizDashboard.aspx");
+                Response.Redirect("User Quiz Dashboard.aspx");
             }
         }
 
@@ -257,7 +257,7 @@ namespace DoughReMi
 
         protected void Back_Click(object sender, EventArgs e)
         {
-            Response.Redirect("UserQuizDashboard.aspx");
+            Response.Redirect("User Quiz Dashboard.aspx");
         }
 
         protected void ProfilePicture_Click(object sender, ImageClickEventArgs e)

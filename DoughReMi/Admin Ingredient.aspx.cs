@@ -70,11 +70,31 @@ namespace DoughReMi
             int numIterations = rand.Next(1, 1000);
 
             string link = "";
-            if (fu.HasFile)
+            if(fu.HasFile)
             {
-                string fileName = numIterations + Path.GetFileName(fu.FileName);
-                fu.SaveAs(Server.MapPath("~/assets/") + fileName);
-                link = "assets/" + fileName;
+                // Define allowed file extensions
+                string[] allowedExtensions = { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                string fileExtension = Path.GetExtension(fu.FileName).ToLower();
+
+                // Check if the selected file is an allowed image type
+                if (Array.Exists(allowedExtensions, ext => ext == fileExtension))
+                {
+                    // Generate a unique filename
+                    string fileName = Guid.NewGuid().ToString() + fileExtension;
+                    string filePath = Server.MapPath("~/assets/") + fileName;
+
+                    // Save the file to the server
+                    fu.SaveAs(filePath);
+                    link = "assets/" + fileName;
+                }
+                else
+                {
+                    // Display message if the selected file is not an allowed image type
+                    
+                    errMsg.Visible = true;
+                    successMsg.Visible = false;
+                    return; // Exit the method without updating the database
+                }
             }
 
             // Update the database
