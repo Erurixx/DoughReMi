@@ -64,7 +64,7 @@
                 OnRowCancelingEdit="GridView1_RowCancelingEdit"
                 OnRowEditing="GridView1_RowEditing"
                 OnRowUpdating="GridView1_RowUpdating"
-                OnRowDeleting="GridView1_RowDeleting">
+                OnRowDeleting="GridView1_RowDeleting" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                     <asp:TemplateField HeaderText="ID" Visible="False">
                         <ItemTemplate>
@@ -107,7 +107,7 @@
                         <ItemTemplate>
                             <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Edit">Edit</asp:LinkButton>
                             &nbsp;&nbsp;
-                            <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Delete">Delete</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Delete" OnClientClick="return confirm('Are you sure you want to delete this ingredient?');">Delete</asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

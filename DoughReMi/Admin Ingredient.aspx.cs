@@ -114,6 +114,10 @@ namespace DoughReMi
 
             con.Close();
 
+            // Register the JavaScript to show the success message and redirect
+            string script = "alert('Ingredient updated successful!');";
+            ScriptManager.RegisterStartupScript(this, GetType(), "AddAlert", script, true);
+
             // Exit edit mode and refresh data
             GridView1.EditIndex = -1;
             Bind();
@@ -211,7 +215,9 @@ namespace DoughReMi
 
         }
 
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
