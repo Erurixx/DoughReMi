@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin Quiz Add.aspx.cs" Inherits="WAPP_Assignment.Assignment.AdminQuizAdd" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin Quiz Add.aspx.cs" Inherits="DoughReMi.AdminQuizAdd" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Add Quiz</title>
-    <link rel="stylesheet" type="text/css" href="Admin Quiz Add.css" />
+    <link rel="stylesheet" type="text/css" href="Admin Quiz add.css" />
     <style type="text/css">
         .auto-style1 {
             width: 865px;
@@ -15,16 +15,19 @@
 <body>
     <form id="form1" runat="server" class="form-container">
         <div>
-            <h1>Add Quiz</h1>
+
+            <div class="page-title">
+                <h2>Add Quiz</h2>
+            </div>
+
             <table class="show">
                 <tr>
-                    <td class="auto-style2">
+                    <td>
                         <asp:Label ID="Label1" runat="server" Text="Title : "></asp:Label>
                     </td>
                     <td class="auto-style1">
-                        <asp:TextBox ID="title" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="title" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvTitle" runat="server" ControlToValidate="title" ErrorMessage="Title is required" ForeColor="Red" ValidationGroup="AddGroup"></asp:RequiredFieldValidator>
-                        <br />
                         <br />
                     </td>
                 </tr>
@@ -33,12 +36,11 @@
                         <asp:Label ID="Label2" runat="server" Text="Difficulty : "></asp:Label>
                     </td>
                     <td class="auto-style1">
-                        <asp:DropDownList ID="difficulty" runat="server" AutoPostBack="True" CssClass="form-control" Width="115px">
+                        <asp:DropDownList ID="difficulty" runat="server">
                             <asp:ListItem>Easy</asp:ListItem>
-                            <asp:ListItem>Medium</asp:ListItem>
+                            <asp:ListItem>Intermediate</asp:ListItem>
                             <asp:ListItem>Hard</asp:ListItem>
                         </asp:DropDownList>
-                        <br/>
                         <br />
                     </td>
                 </tr>

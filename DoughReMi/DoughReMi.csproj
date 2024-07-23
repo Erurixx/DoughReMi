@@ -114,7 +114,7 @@
     <Content Include="Admin Forum.aspx" />
     <Content Include="Admin forum.css" />
     <Content Include="Admin Quiz Add.aspx" />
-    <Content Include="Admin Quiz Add.css" />
+    <Content Include="Admin Quiz add.css" />
     <Content Include="Admin Quiz Dashboard.aspx" />
     <Content Include="Admin Quiz Edit.aspx" />
     <Content Include="Admin Quiz Edit.css" />

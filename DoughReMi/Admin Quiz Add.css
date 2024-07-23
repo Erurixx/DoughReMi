@@ -1,7 +1,23 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    background-color: white;
+﻿html {
+    scroll-behavior: smooth;
 }
+
+body {
+    background-color: #F9F9F9;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+.page-title {
+    text-align: center;
+}
+
+    .page-title h2 {
+        font-weight: bold;
+    }
 
 .form-container {
     max-width: 1000px;
