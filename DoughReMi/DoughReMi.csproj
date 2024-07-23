@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin Menu Recipe.aspx" />
     <Content Include="Admin Quiz View.aspx" />
     <Content Include="Admin Quiz View.css" />
     <Content Include="Admin.css" />
@@ -239,6 +240,13 @@
     </Compile>
     <Compile Include="Admin Forum.aspx.designer.cs">
       <DependentUpon>Admin Forum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu Recipe.aspx.cs">
+      <DependentUpon>Admin Menu Recipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Menu Recipe.aspx.designer.cs">
+      <DependentUpon>Admin Menu Recipe.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin Quiz Add.aspx.cs">
       <DependentUpon>Admin Quiz Add.aspx</DependentUpon>
