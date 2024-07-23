@@ -24,33 +24,33 @@ h1 {
     border-collapse: collapse;
 }
 
-    .form-table .label-column {
-        width: 25%;
-        background-color: #FAFFAF;
-        color: #333;
-        font-weight: bold;
-        text-transform: uppercase;
-        padding: 10px;
-        border: 1px solid #ddd;
-    }
+.form-table .label-column {
+     width: 25%;
+     background-color: #FAFFAF;
+     color: #333;
+     font-weight: bold;
+     text-transform: uppercase;
+     padding: 10px;
+     border: 1px solid #ddd;
+}
 
-    .form-table .control-column {
-        width: 75%;
-        padding: 10px;
-        border: 1px solid #ddd;
-    }
+.form-table .control-column {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
 
-        .form-table .control-column input[type="text"],
-        .form-table .control-column textarea {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            font-family: 'Times New Roman', Times, serif;
-        }
+.form-table .control-column input[type="text"],
+.form-table .control-column textarea {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+}
 
-        .form-table .control-column input[type="file"] {
-            width: auto;
-        }
+.form-table .control-column input[type="file"] {
+        width: auto;
+ }
 
 .save-button {
     text-align: right;
@@ -64,9 +64,9 @@ h1 {
     cursor: pointer;
 }
 
-    .btn-save:hover {
-        background-color: #45a049;
-    }
+.btn-save:hover {
+    background-color: #45a049;
+}
 
 .grid-view {
     width: 100%;
@@ -95,5 +95,18 @@ h1 {
 .grid-view tr:hover {
     background-color: #ddd;
 }
+
+.back-btn {
+    background-color: #fde047;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #45a049;
+}
+
 
     

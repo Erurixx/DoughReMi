@@ -100,5 +100,15 @@ namespace DoughReMi
                 BindAdminPosts();
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void back_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin Main Page.aspx");
+        }
     }
 }

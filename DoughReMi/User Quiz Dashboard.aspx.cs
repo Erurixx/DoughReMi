@@ -61,7 +61,7 @@ namespace DoughReMi
         {
             Button btn = (Button)sender;
             string quizTitle = btn.CommandArgument;
-            Response.Redirect("UserQuizAttempt.aspx?title=" + quizTitle);
+            Response.Redirect("User Quiz Attempt.aspx?title=" + quizTitle);
         }
 
         protected void Back_Click(object sender, EventArgs e)

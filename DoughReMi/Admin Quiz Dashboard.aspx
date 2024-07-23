@@ -46,7 +46,7 @@
                             <div class="button-container">
                                 <asp:Button ID="btnView" runat="server" CommandArgument='<%# Eval("title") %>' Text="View" CssClass="btn" OnClick="View_Click" />
                                 <asp:Button ID="btnEdit" runat="server" CommandArgument='<%# Eval("title") %>' Text="Edit" CssClass="btn" OnClick="Edit_Click" />
-                                <asp:Button ID="btnDelete" runat="server" CommandArgument='<%# Eval("title") %>' Text="Delete" CssClass="btn" OnClick="Delete_Click" />
+                                <asp:Button ID="btnDelete" runat="server" CommandArgument='<%# Eval("title") %>' Text="Delete" CssClass="btn" OnClick="Delete_Click" OnClientClick="return confirm('Are you sure you want to delete this quiz?');"/>
                             </div>
                         </ItemTemplate>
                          <ItemStyle Width="150px" />

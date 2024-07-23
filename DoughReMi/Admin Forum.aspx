@@ -5,12 +5,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Admin Panel</title>
-    <link rel="stylesheet" type="text/css" href="Admin Forum.css" />
+    <link rel="stylesheet" type="text/css" href="Admin forum.css" />
+    <style type="text/css">
+        .auto-style2 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            <h2>Manage Discussion Forum</h2>
+            <p>
+                <asp:Button ID="back" runat="server" CssClass="back-btn" OnClick="back_Click1" Text="Back" />
+            </p>
+            <h1 class="auto-style2">Manage Discussion Forum</h1>
+            <p class="auto-style2">&nbsp;</p>
 
             <asp:Repeater ID="RptAdminPosts" runat="server">
                 <ItemTemplate>

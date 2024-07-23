@@ -112,7 +112,7 @@
     <Content Include="Add Admin.aspx" />
     <Content Include="Admin Main Page.aspx" />
     <Content Include="Admin Forum.aspx" />
-    <Content Include="Admin Forum.css" />
+    <Content Include="Admin forum.css" />
     <Content Include="Admin Quiz Add.aspx" />
     <Content Include="Admin Quiz Add.css" />
     <Content Include="Admin Quiz Dashboard.aspx" />

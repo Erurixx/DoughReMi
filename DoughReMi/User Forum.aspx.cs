@@ -24,6 +24,7 @@ namespace DoughReMi
             }
         }
 
+        //if the box 
         protected void BtnSubmitPost_Click(object sender, EventArgs e)
         {
             string postContent = txtNewPost.Text.Trim();
