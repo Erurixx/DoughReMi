@@ -11,7 +11,7 @@ namespace DoughReMi
 {
 
 
-    public partial class User_MR_detail
+    public partial class User_Bookmark
     {
 
         /// <summary>
@@ -51,48 +51,12 @@ namespace DoughReMi
         protected global::System.Web.UI.WebControls.LinkButton LogoutLink;
 
         /// <summary>
-        /// MRNameLabel control.
+        /// BookmarkGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MRNameLabel;
-
-        /// <summary>
-        /// MRImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image MRImage;
-
-        /// <summary>
-        /// MRDescriptionLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MRDescriptionLabel;
-
-        /// <summary>
-        /// MRVideoPlaceholder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder MRVideoPlaceholder;
-
-        /// <summary>
-        /// Bookmark control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Bookmark;
+        protected global::System.Web.UI.WebControls.GridView BookmarkGridView;
     }
 }

@@ -70,6 +70,18 @@ namespace DoughReMi
             }
         }
 
+        protected void ProfilePicture_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("User Profile.aspx");
+        }
+
+        protected void LogoutLink_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Log Out Successful!'); window.location ='Login.aspx';", true);
+        }
+
         private void LoadRecipeData()
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["IngredientConnectionString"].ConnectionString))
@@ -81,18 +93,6 @@ namespace DoughReMi
                 RecipeRepeater.DataSource = reader;
                 RecipeRepeater.DataBind();
             }
-        }
-
-        protected void ProfilePicture_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect("User Profile.aspx");
-        }
-
-        protected void LogoutLink_Click(object sender, EventArgs e)
-        {
-            Session.Clear();
-            Session.Abandon();
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Log Out Successful!'); window.location ='Login.aspx';", true);
         }
 
         protected void RecipeRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)

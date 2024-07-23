@@ -31,12 +31,12 @@
             <a href="Main Page After Logged In.aspx">DoughReMi</a>
         </div>
         <ul class="topnav">
-            <li><a href="MenuRecipe Dashboard">Menu & Recipes</a></li>
-            <li><a href="User Quiz Dashboard.aspx">Quiz & Assessments</a></li>
-            <li><a href="User Ingredient.aspx">Ingredients</a></li>
-            <li><a href="User Forum.aspx">Forums</a></li>
-            <li><a href="#bookmark">Bookmark</a></li>
-            <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
+                <li><a href="MenuRecipe Dashboard.aspx">Menu & Recipes</a></li>
+                <li><a href="User Quiz Dashboard.aspx">Quiz & Assessments</a></li>
+                <li><a href="User Ingredient.aspx">Ingredients</a></li>
+                <li><a href="User Forum.aspx">Forums</a></li>
+                <li><a href="User Bookmark.aspx">Bookmark</a></li>
+                <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
         </ul>
 
          <div class="profile">

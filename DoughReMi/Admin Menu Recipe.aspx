@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Menu Recipe Form</title>
-    <link rel="stylesheet" type="text/css" href="Admin Menu Recipe.css" />
+    <link rel="stylesheet" type="text/css" href="Admin Ingredient.css" />
     <style type="text/css">
         .auto-style1 {
             text-align: left;

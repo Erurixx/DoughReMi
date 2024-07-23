@@ -1,13 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MenuRecipe Dashboard.aspx.cs" Inherits="DoughReMi.MenuRecipe_Dashboard" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User Bookmark.aspx.cs" Inherits="DoughReMi.User_Bookmark" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Menu & Recipe Dashboard</title>
-    <link rel="icon" href="assets\company-logo 32x32.jpeg" type="image/x-icon" />
-    <link rel="stylesheet" href="MRdashboard.css" />
-    <link rel="stylesheet" href="Main Page.css" />
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="User Bookmark.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -37,25 +34,21 @@
             </div>
         </nav>
 
-        <div class="dashboard">
-            <h2>Menu & Recipe Dashboard</h2>
-            <div class="recipe-list">
-                <!-- Add the Repeater control -->
-                <asp:Repeater ID="RecipeRepeater" runat="server" OnItemCommand="RecipeRepeater_ItemCommand">
-                    <ItemTemplate>
-                        <div class="recipe-item">
-                            <asp:ImageButton ID="RecipeImage" runat="server" ImageUrl='<%# Eval("MRimage") %>' 
-                                Width="254px" Height="192px" CommandArgument='<%# Eval("MRname") %>' CommandName="ViewDetails" />
-                            <h4>
-                                <asp:LinkButton ID="RecipeName" runat="server" CommandArgument='<%# Eval("MRname") %>' CommandName="ViewDetails">
-                                    <%# Eval("MRname") %>
-                                </asp:LinkButton>
-                            </h4>
-                        </div>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </div>
+        <div class="bookmark-header">
+            <h2>Bookmark</h2>
         </div>
+
+        <div class="bookmark-list">
+            <asp:GridView ID="BookmarkGridView" runat="server" CssClass="bookmark-table" AutoGenerateColumns="False" OnRowCommand="BookmarkGridView_RowCommand" OnSelectedIndexChanged="BookmarkGridView_SelectedIndexChanged">
+                <Columns>
+                    <asp:BoundField DataField="MRname" HeaderText="Recipe Name" />
+                    <asp:ImageField DataImageUrlField="MRimage" HeaderText="Image" ControlStyle-Width="100px" ControlStyle-Height="100px" />
+                    <asp:ButtonField CommandName="ViewDetails" Text="View" ButtonType="Button"/>
+                </Columns>
+            </asp:GridView>
+        </div>
+
     </form>
 </body>
 </html>
+

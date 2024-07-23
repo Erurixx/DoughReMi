@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>User Quiz Dashboard</title>
+    <link rel="icon" href="assets\company-logo 32x32.jpeg" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="User Quiz Dashboard.css" />
         <!-- Title & Logo Font -->
     <link rel="stylesheet"
@@ -22,11 +23,11 @@
                 <a href="Main Page After Logged In.aspx">DoughReMi</a>
             </div>
             <ul class="topnav">
-                <li><a href="#menu-recipe">Menu & Recipes</a></li>
+                <li><a href="MenuRecipe Dashboard.aspx">Menu & Recipes</a></li>
                 <li><a href="User Quiz Dashboard.aspx">Quiz & Assessments</a></li>
                 <li><a href="User Ingredient.aspx">Ingredients</a></li>
                 <li><a href="User Forum.aspx">Forums</a></li>
-                <li><a href="#bookmark">Bookmark</a></li>
+                <li><a href="User Bookmark.aspx">Bookmark</a></li>
                 <li><a href="Terms and Condition.aspx">Terms and Condition</a></li>
             </ul>
 
