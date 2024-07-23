@@ -82,6 +82,16 @@ namespace DoughReMi
             Response.Redirect("User Profile.aspx");
         }
 
+        protected void LogoutLink_Click(object sender, EventArgs e)
+        {
+            // Clear the session
+            Session.Clear();
+            Session.Abandon();
+
+            // Notify user of successful logout
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Log Out Successful!'); window.location ='Login.aspx';", true);
+        }
+
 
     }
 }

@@ -28,7 +28,7 @@
 
     <nav id="desktop-nav">
         <div class="logo">
-            <a href="Main Page.aspx">DoughReMi</a>
+            <a href="Main Page After Logged In.aspx">DoughReMi</a>
         </div>
         <ul class="topnav">
             <li><a href="#menu-recipe">Menu & Recipes</a></li>
@@ -47,6 +47,7 @@
             <div id="profile-dropdown" class="dropdown-content">
                 <a href="User Profile.aspx">Manage Profile</a>
                 <a href="Change Password.aspx">Change Password</a>
+                <asp:LinkButton ID="LogoutLink" runat="server" OnClick="LogoutLink_Click">Log Out</asp:LinkButton>
             </div>
         </div>
     </nav>

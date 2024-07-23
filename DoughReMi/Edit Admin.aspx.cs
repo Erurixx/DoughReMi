@@ -50,6 +50,29 @@ namespace DoughReMi
 
         protected void btnUpdateProfile_Click(object sender, EventArgs e)
         {
+
+            // Get values from the form
+            string firstName = txtFirstName.Text.Trim();
+            string lastName = txtLastName.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            
+            
+            string gender = txtgender.SelectedValue;
+
+            // Validate inputs
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email) ||  string.IsNullOrEmpty(gender))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Please fill in all fields.');", true);
+                return;
+            }
+
+            // Validate email domain
+            string[] emailParts = email.Split('@');
+            if (emailParts.Length != 2 || emailParts[1] != "admin.com")
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Email must be in the format username@admin.com.');", true);
+                return;
+            }
             try
             {
                 string adminId = Request.QueryString["adminId"];

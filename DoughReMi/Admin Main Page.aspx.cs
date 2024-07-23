@@ -90,7 +90,18 @@ namespace DoughReMi
                 int registeredUsersCount = (int)registeredUsersCmd.ExecuteScalar();
                 lblRegisteredUsers.Text = registeredUsersCount.ToString();
 
-               
+                // Fetch total admins count
+                string totalAdminsQuery = "SELECT COUNT(*) FROM Register WHERE email LIKE '%@admin.com'";
+                SqlCommand totalAdminsCmd = new SqlCommand(totalAdminsQuery, con);
+                int totalAdminsCount = (int)totalAdminsCmd.ExecuteScalar();
+                lblTotalAdmins.Text = totalAdminsCount.ToString();
+
+                // Fetch total users count (excluding admins)
+                string totalUsersQuery = "SELECT COUNT(*) FROM Register WHERE email NOT LIKE '%@admin.com'";
+                SqlCommand totalUsersCmd = new SqlCommand(totalUsersQuery, con);
+                int totalUsersCount = (int)totalUsersCmd.ExecuteScalar();
+                lblTotalUsers.Text = totalUsersCount.ToString();
+
             }
         }
     }

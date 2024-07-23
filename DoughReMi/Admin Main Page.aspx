@@ -82,9 +82,21 @@
             <!-- Info Boxes -->
                 <div class="info-boxes">
                     <div class="info-box">
-                        <h3>Registered Users</h3>
+                        <h3>Total Registered Users</h3>
                         <asp:Label ID="lblRegisteredUsers" runat="server" CssClass="info-number"></asp:Label>
                     </div>
+
+                    <div class="info-box">
+                        <h3>Total Admins</h3>
+                        <asp:Label ID="lblTotalAdmins" runat="server" CssClass="info-number"></asp:Label>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Total Users</h3>
+                        <asp:Label ID="lblTotalUsers" runat="server" CssClass="info-number"></asp:Label>
+                    </div>
+
+
                     
                 </div>
         </div>

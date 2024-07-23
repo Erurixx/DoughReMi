@@ -41,12 +41,29 @@ namespace DoughReMi
                 return;
             }
 
+            // Validate email domain
+            string[] emailParts = email.Split('@');
+            if (emailParts.Length != 2 || emailParts[1] != "admin.com")
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Email must be in the format username@admin.com.');", true);
+                return;
+            }
+
             // Save admin details to database
+            
             try
             {
-                string imageUrl = null;
+                string imageUrl = "/assets/default-avatar.jpg"; // Default image URL
                 if (fuProfilePic.HasFile)
                 {
+
+                    // Validate file extension
+                    string fileExtension = Path.GetExtension(fuProfilePic.FileName).ToLower();
+                    if (fileExtension != ".jpg" && fileExtension != ".jpeg" && fileExtension != ".png")
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Only .jpg, .jpeg, or .png files are allowed.');", true);
+                        return;
+                    }
                     // Save profile picture to server and get the URL
                     string filename = Path.GetFileName(fuProfilePic.FileName);
                     string folderPath = Server.MapPath("/UploadedImages/");

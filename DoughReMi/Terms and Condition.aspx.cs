@@ -17,8 +17,17 @@ namespace DoughReMi
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            // Navigate back to the previous page
-            Response.Redirect("Main Page After Logged In.aspx");
+            // Check if the user is logged in by inspecting the session variable
+            if (Session["storeUsername"] != null)
+            {
+                // If the user is logged in, redirect to the registered user main page
+                Response.Redirect("Main Page After Logged In.aspx");
+            }
+            else
+            {
+                // If the user is not logged in, redirect to the non-user main page
+                Response.Redirect("Main Page.aspx");
+            }
         }
     }
 }

@@ -240,11 +240,7 @@ nav {
     line-height: 1.5rem;
 }
 
-@media (min-width: 600px) {
-    .content-item {
-        flex-direction: row;
-    }
-}
+
 
 .content-item img {
     border-radius: 10px;
