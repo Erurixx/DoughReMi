@@ -1,0 +1,31 @@
+﻿/* Menu and Recipe Page Styles */
+.menu-section, .recipe-section, .video-preview {
+    background-color: #fefce8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-section h3, .recipe-section h3, .video-preview h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.menu-item {
+    margin-bottom: 15px;
+}
+
+.menu-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.video-preview {
+    text-align: center;
+}
+
+.video-preview iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}

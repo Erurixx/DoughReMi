@@ -31,7 +31,7 @@
             <a href="Main Page After Logged In.aspx">DoughReMi</a>
         </div>
         <ul class="topnav">
-            <li><a href="#menu-recipe">Menu & Recipes</a></li>
+            <li><a href="MenuRecipe Dashboard">Menu & Recipes</a></li>
             <li><a href="User Quiz Dashboard.aspx">Quiz & Assessments</a></li>
             <li><a href="User Ingredient.aspx">Ingredients</a></li>
             <li><a href="User Forum.aspx">Forums</a></li>

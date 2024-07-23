@@ -143,6 +143,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Fruit Tart.aspx" />
+    <Content Include="MenuRecipe Dashboard.aspx" />
+    <Content Include="MR.css" />
+    <Content Include="MRDashboard.css" />
     <Content Include="User Forum.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Admin Ingredient.aspx" />
@@ -345,6 +349,20 @@
     </Compile>
     <Compile Include="Manage User.aspx.designer.cs">
       <DependentUpon>Manage User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fruit Tart.aspx.cs">
+      <DependentUpon>Fruit Tart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fruit Tart.aspx.designer.cs">
+      <DependentUpon>Fruit Tart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuRecipe Dashboard.aspx.cs">
+      <DependentUpon>MenuRecipe Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuRecipe Dashboard.aspx.designer.cs">
+      <DependentUpon>MenuRecipe Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterNew.aspx.cs">
