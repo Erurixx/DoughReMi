@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -15,17 +14,14 @@ namespace DoughReMi
         {
             if (!IsPostBack)
             {
-                
                 LoadUserProfile();
                 LoadProfilePicture();
+                LoadRecipeData();
             }
         }
 
-        
-
         private void LoadUserProfile()
         {
-            // Retrieve the login identifier from the session
             string loginIdentifier = Session["storeUsername"]?.ToString();
 
             if (!string.IsNullOrEmpty(loginIdentifier))
@@ -40,7 +36,6 @@ namespace DoughReMi
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        // Set the username in the label
                         usernamelbl.Text = "Hi, " + reader["userName"].ToString();
                     }
                     conn.Close();
@@ -50,7 +45,6 @@ namespace DoughReMi
 
         private void LoadProfilePicture()
         {
-            // Retrieve the login identifier from the session
             string loginIdentifier = Session["storeUsername"]?.ToString();
 
             if (!string.IsNullOrEmpty(loginIdentifier))
@@ -76,6 +70,19 @@ namespace DoughReMi
             }
         }
 
+        private void LoadRecipeData()
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["IngredientConnectionString"].ConnectionString))
+            {
+                string query = "SELECT MRname, MRimage FROM MenuRecipe";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                RecipeRepeater.DataSource = reader;
+                RecipeRepeater.DataBind();
+            }
+        }
+
         protected void ProfilePicture_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("User Profile.aspx");
@@ -83,12 +90,19 @@ namespace DoughReMi
 
         protected void LogoutLink_Click(object sender, EventArgs e)
         {
-            // Clear the session
             Session.Clear();
             Session.Abandon();
-
-            // Notify user of successful logout
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Log Out Successful!'); window.location ='Login.aspx';", true);
         }
+
+        protected void RecipeRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "ViewDetails")
+            {
+                string mrName = e.CommandArgument.ToString();
+                Response.Redirect("User MR detail.aspx?MRname=" + HttpUtility.UrlEncode(mrName));
+            }
+        }
+
     }
 }
