@@ -144,6 +144,10 @@ namespace DoughReMi
             {
                 cmd.Parameters.AddWithValue("@MRimage", imageUrl);
             }
+            if (vd.HasFile)
+            {
+                cmd.Parameters.AddWithValue("@MRvideourl", videoUrl);
+            }
             cmd.Parameters.AddWithValue("@ID", labelID.Text);
             cmd.ExecuteNonQuery();
 
