@@ -29,7 +29,7 @@
         </div>
         <ul class="topnav">
             <li class="dropdown">
-                <a href="#menu-recipe">Menu & Recipes</a>    
+                <a href="MenuRecipe Dashboard.aspx">Menu & Recipes</a>    
             </li>
 
             

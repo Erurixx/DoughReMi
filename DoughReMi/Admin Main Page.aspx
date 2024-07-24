@@ -49,10 +49,10 @@
                             <asp:HyperLink ID="HyperLinkManageForums" runat="server" NavigateUrl="Admin Forum.aspx">Manage Discussion Forums</asp:HyperLink>
                         </li>
                         <li>
-                            <asp:HyperLink ID="HyperLinkManageMenu" runat="server" NavigateUrl="Admin Ingredient.aspx">Manage Ingredient</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLinkManageIngredient" runat="server" NavigateUrl="Admin Ingredient.aspx">Manage Ingredient</asp:HyperLink>
                         </li>
                         <li>
-                            <asp:HyperLink ID="HyperLinkManageVideos" runat="server" NavigateUrl="#manage-videos">Manage Videos</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLinkManageMenu" runat="server" NavigateUrl="Admin Menu Recipe.aspx">Manage Menu and Recipe</asp:HyperLink>
                         </li>
                     </ul>
                 </li>

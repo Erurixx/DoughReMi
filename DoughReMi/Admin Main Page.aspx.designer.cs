@@ -60,6 +60,15 @@ namespace DoughReMi
         protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageForums;
 
         /// <summary>
+        /// HyperLinkManageIngredient control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageIngredient;
+
+        /// <summary>
         /// HyperLinkManageMenu control.
         /// </summary>
         /// <remarks>
@@ -67,15 +76,6 @@ namespace DoughReMi
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageMenu;
-
-        /// <summary>
-        /// HyperLinkManageVideos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageVideos;
 
         /// <summary>
         /// ProfilePicture control.

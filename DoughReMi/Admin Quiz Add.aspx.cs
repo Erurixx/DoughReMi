@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Web.UI;
 
-namespace WAPP_Assignment.Assignment
+namespace DoughReMi
 {
     public partial class AdminQuizAdd : Page
     {
