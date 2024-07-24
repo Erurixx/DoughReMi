@@ -51,7 +51,7 @@
                     <a href="RecipeDetail.aspx?recipeId=2">
                         <img src="/assets/recipe2.jpg" alt="Recipe 2" />
                         <h4>Vanilla Cupcakes</h4>
-                        <p>Light and fluffy vanilla cupcakes.</p>
+                        <p>Cupcakes</p>
                     </a>
                 </div>
                 <div class="recipe-item">
