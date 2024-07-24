@@ -104,5 +104,15 @@ namespace DoughReMi
 
             }
         }
+
+        protected void LogoutLink_Click(object sender, EventArgs e)
+        {
+            // Clear the session
+            Session.Clear();
+            Session.Abandon();
+
+            // Notify user of successful logout and redirect to login page
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Log Out Successful!'); window.location ='Login.aspx';", true);
+        }
     }
 }

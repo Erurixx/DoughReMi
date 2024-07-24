@@ -6,88 +6,114 @@
     box-sizing: border-box;
 }
 
-
 html, body {
     height: 100%;
     font-family: 'Inter', sans-serif;
-    background-color: #F9F9F9;
-    
-    
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.mb-4 {
-    font-size: 1.5rem;   
+
+.login-section {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.container {
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 4rem;
-    margin-left: 17rem;
-    
-}
-.form-control::placeholder {
-    color: #E8E8E8;
-}
-.wrap {
-    background: #fefce8;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem;
+    background: #ffffff;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+}
+
+.wrap {
     display: flex;
     width: 100%;
+    max-width: 1000px;
 }
 
 .img {
-    width: 50%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    border-right: 1px solid #ddd;
+}
+
+.img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .login-wrap {
-    padding: 4rem;
-    width: 50%;
+    flex: 1;
+    padding: 2rem;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-
-.text-danger {
-    
-    color: #dc3545;
+h3.mb-4 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
 }
 
 .form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
     margin-bottom: 0.5rem;
-    margin-top: 1.5rem;
 }
 
 .form-control {
-    margin-top:0.5rem;
-    display: block;
     width: 100%;
-    padding: 0.75rem;
+    padding: 1rem;
     font-size: 1rem;
     line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    margin-bottom: 0.3rem;
-        
-}
-#SignInButton {
-    background-color: #fde047;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom:1.5rem;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
 }
 
-#SignInButton:hover {
-    color: black;
-    background-color: #FFEF64;
-    
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
 }
+
+.text-danger {
+    color: #dc3545;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
 .text-center {
     text-align: center;
 }
@@ -95,6 +121,7 @@ html, body {
 .text-center a {
     color: #007bff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .text-center a:hover {

@@ -69,6 +69,7 @@
                 <div class="profile">
                     <asp:ImageButton ID="ProfilePicture" runat="server" CssClass="profile-picture" ImageUrl="/assets/default-avatar.jpg" Height="43px" Width="43px" />
                     <asp:Label ID="usernamelbl" runat="server" CssClass="username"></asp:Label>
+                    <asp:LinkButton ID="LogoutLink" runat="server" CssClass="logout-button" OnClick="LogoutLink_Click">Log Out</asp:LinkButton>
                 </div>
             </header>
             

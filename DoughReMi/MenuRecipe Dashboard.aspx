@@ -49,7 +49,7 @@
                 </div>
                 <div class="recipe-item">
                     <a href="RecipeDetail.aspx?recipeId=2">
-                        <img src="/assets/recipe2.jpg" alt="Recipe 2" />
+                        <img src="assets\vanilla cupcake.jpg" alt="Recipe 2" style="height: 192px; width: 254px"/>
                         <h4>Vanilla Cupcakes</h4>
                         <p>Light and fluffy vanilla cupcakes.</p>
                     </a>
