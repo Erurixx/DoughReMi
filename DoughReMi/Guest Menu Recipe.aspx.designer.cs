@@ -11,7 +11,7 @@ namespace DoughReMi
 {
 
 
-    public partial class Menu_and_Recipe___Jas
+    public partial class Guest_Menu_Recipe
     {
 
         /// <summary>
@@ -24,30 +24,12 @@ namespace DoughReMi
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// ProfilePicture control.
+        /// RecipeRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ProfilePicture;
-
-        /// <summary>
-        /// usernamelbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label usernamelbl;
-
-        /// <summary>
-        /// LogoutLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LogoutLink;
+        protected global::System.Web.UI.WebControls.Repeater RecipeRepeater;
     }
 }

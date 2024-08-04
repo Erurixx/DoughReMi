@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -11,16 +12,14 @@ html {
 
 body {
     background-color: #F9F9F9;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "slnt" 0;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
 }
 
 .btn {
     background-color: #fde047;
-    color: #fff;
+    color: #333;
     padding: 0.75rem 1.5rem;
     text-align: center;
     display: inline-block;
@@ -29,95 +28,51 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
     .btn:hover {
         background-color: #FFEF64;
     }
 
-/*Deskstop Navigation*/
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .topnav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
     list-style: none;
     font-size: 1rem;
-    flex: 1;
 }
 
     .topnav a {
         text-decoration: none;
-        color: black;
+        color: #333;
+        transition: color 0.3s;
     }
 
         .topnav a:hover {
             color: #E8D10D;
-            transition: background-color 0.3s, color 0.3s;
         }
 
 .logo a {
-    margin-left: 2rem;
     text-decoration: none;
-    color: black;
+    color: #333;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .profile {
     display: flex;
     align-items: center;
-    margin-right: 2rem;
-    position: relative; /* Ensure relative positioning for absolute dropdown */
+    position: relative;
 }
-
-
-.profile-picture {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.username {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 60px; /* Adjust this value as needed */
-    right: 0;
-    background-color: #ffffff;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    min-width: 160px;
-}
-
-.profile:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-    .dropdown-content a:hover {
-        background-color: #FFEF64;
-    }
 
 .profile-picture {
     width: 40px;
@@ -131,31 +86,98 @@ nav {
         transform: scale(1.1);
     }
 
-/* Centering the content in the recipe-detail section */
-.recipe-detail {
-    text-align: center;
-    margin: 20px;
-}
-
-/* Center the name label and add padding */
-#MRNameLabel {
-    font-size: 24px;
+.username {
+    margin-left: 10px;
     font-weight: bold;
-    margin: 50px;
+    font-size: 1rem;
 }
 
-/* Set the image to 100px width */
-#MRImage {
-    width: 300px;
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px;
-    margin-bottom: 20px;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 160px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-/* Center the description */
-#MRDescriptionLabel {
+.profile:hover .dropdown-content {
     display: block;
-    margin: 0 auto 20px auto;
 }
 
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
 
+    .dropdown-content a:hover {
+        background-color: #FFEF64;
+    }
+
+.recipe-detail {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recipe-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.recipe-description {
+    margin: 20px 0;
+    text-align: left;
+    font-size: 18px;
+    color: #666;
+}
+
+.recipe-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.recipe-steps {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.recipe-video {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.additional-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.additional-image {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

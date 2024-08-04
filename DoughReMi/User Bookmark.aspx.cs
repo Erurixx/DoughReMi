@@ -73,6 +73,8 @@ namespace DoughReMi
             }
         }
 
+
+
         protected void ProfilePicture_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("User Profile.aspx");
