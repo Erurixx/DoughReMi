@@ -107,14 +107,13 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Admin Menu Recipe.aspx" />
-    <Content Include="Admin Menu Recipe.css" />
     <Content Include="Admin Quiz View.aspx" />
     <Content Include="Admin Quiz View.css" />
     <Content Include="Admin.css" />
     <Content Include="Add Admin.aspx" />
     <Content Include="Admin Main Page.aspx" />
     <Content Include="Admin Forum.aspx" />
-    <Content Include="Admin FOrum.css" />
+    <Content Include="Admin forum.css" />
     <Content Include="Admin Quiz Add.aspx" />
     <Content Include="Admin Quiz add.css" />
     <Content Include="Admin Quiz Dashboard.aspx" />
@@ -145,9 +144,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Guest Ingredient.aspx" />
-    <Content Include="Guest Ingredient.css" />
-    <Content Include="Guest Menu Recipe.aspx" />
+    <Content Include="Fruit Tart.aspx" />
     <Content Include="MenuRecipe Dashboard.aspx" />
     <Content Include="MRdashboard.css" />
     <Content Include="User Bookmark.aspx" />
@@ -155,7 +152,7 @@
     <Content Include="User Forum.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Admin Ingredient.aspx" />
-    <Content Include="Admin ingredient.css" />
+    <Content Include="Admin Ingredient.css" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="Main Page After Logged In.aspx" />
@@ -329,20 +326,6 @@
     <Compile Include="Admin Ingredient.aspx.designer.cs">
       <DependentUpon>Admin Ingredient.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Guest Ingredient.aspx.cs">
-      <DependentUpon>Guest Ingredient.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Guest Ingredient.aspx.designer.cs">
-      <DependentUpon>Guest Ingredient.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Guest Menu Recipe.aspx.cs">
-      <DependentUpon>Guest Menu Recipe.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Guest Menu Recipe.aspx.designer.cs">
-      <DependentUpon>Guest Menu Recipe.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -377,6 +360,13 @@
     </Compile>
     <Compile Include="Manage User.aspx.designer.cs">
       <DependentUpon>Manage User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fruit Tart.aspx.cs">
+      <DependentUpon>Fruit Tart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fruit Tart.aspx.designer.cs">
+      <DependentUpon>Fruit Tart.aspx</DependentUpon>
     </Compile>
     <Compile Include="MenuRecipe Dashboard.aspx.cs">
       <DependentUpon>MenuRecipe Dashboard.aspx</DependentUpon>

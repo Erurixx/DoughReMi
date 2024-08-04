@@ -9,8 +9,9 @@ namespace DoughReMi
 {
     public partial class UserForum : System.Web.UI.Page
     {
-        private string connectionString;
 
+
+        private string connectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             connectionString = ConfigurationManager.ConnectionStrings["IngredientConnectionString"].ConnectionString;
@@ -23,19 +24,17 @@ namespace DoughReMi
             }
         }
 
+        //if the box 
         protected void BtnSubmitPost_Click(object sender, EventArgs e)
         {
             string postContent = txtNewPost.Text.Trim();
-            string userName = usernamelbl.Text.Replace("Hi, ", ""); // Assuming the label shows "Hi, [username]"
-
             if (!string.IsNullOrEmpty(postContent))
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("INSERT INTO qTable (question, userName) VALUES (@question, @userName); SELECT SCOPE_IDENTITY()", conn);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO qTable (question) VALUES (@question); SELECT SCOPE_IDENTITY()", conn);
                     cmd.Parameters.AddWithValue("@question", postContent);
-                    cmd.Parameters.AddWithValue("@userName", userName);
                     int postId = Convert.ToInt32(cmd.ExecuteScalar());
                 }
 
@@ -50,12 +49,11 @@ namespace DoughReMi
             int postId = int.Parse(btn.CommandArgument);
             RepeaterItem item = (RepeaterItem)btn.NamingContainer;
             TextBox txtNewComment = (TextBox)item.FindControl("txtNewComment");
-            string userName = usernamelbl.Text.Replace("Hi, ", ""); // Assuming the label shows "Hi, [username]"
 
             string commentContent = txtNewComment.Text.Trim();
             if (!string.IsNullOrEmpty(commentContent))
             {
-                InsertComment(postId, commentContent, userName);
+                InsertComment(postId, commentContent);
                 txtNewComment.Text = string.Empty; // Clear comment textbox after submitting a comment
                 LoadPosts();
             }
@@ -71,7 +69,6 @@ namespace DoughReMi
                 rptComments.DataBind();
             }
         }
-
         private void LoadUserProfile()
         {
             // Retrieve the login identifier from the session
@@ -96,6 +93,7 @@ namespace DoughReMi
                 }
             }
         }
+
 
         private void LoadProfilePicture()
         {
@@ -129,7 +127,6 @@ namespace DoughReMi
         {
             Response.Redirect("User Profile.aspx");
         }
-
         private void LoadPosts()
         {
             List<Post> posts = new List<Post>();
@@ -137,7 +134,7 @@ namespace DoughReMi
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT qId, question, userName FROM qTable", conn);
+                SqlCommand cmd = new SqlCommand("SELECT qId, question FROM qTable", conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -146,7 +143,6 @@ namespace DoughReMi
                     {
                         PostID = (int)reader["qId"],
                         PostContent = reader["question"].ToString(),
-                        UserName = reader["userName"].ToString(),
                         Comments = new List<Comment>()
                     };
 
@@ -156,15 +152,14 @@ namespace DoughReMi
 
                 foreach (var post in posts)
                 {
-                    SqlCommand commentCmd = new SqlCommand("SELECT Comment, userName FROM aTable WHERE qId = @qId", conn);
+                    SqlCommand commentCmd = new SqlCommand("SELECT comment FROM aTable WHERE qId = @qId", conn);
                     commentCmd.Parameters.AddWithValue("@qId", post.PostID);
                     SqlDataReader commentReader = commentCmd.ExecuteReader();
                     while (commentReader.Read())
                     {
                         post.Comments.Add(new Comment
                         {
-                            CommentContent = commentReader["Comment"].ToString(),
-                            UserName = commentReader["userName"].ToString()
+                            CommentContent = commentReader["comment"].ToString()
                         });
                     }
                     commentReader.Close();
@@ -177,36 +172,35 @@ namespace DoughReMi
             RptPosts.DataBind();
         }
 
-        private void InsertComment(int postId, string commentContent, string userName)
+        private void InsertComment(int postId, string commentContent)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO aTable (qId, Comment, userName) VALUES (@qId, @comment, @userName)", conn);
+                SqlCommand cmd = new SqlCommand("INSERT INTO aTable (qId, comment) VALUES (@qId, @comment)", conn);
                 cmd.Parameters.AddWithValue("@qId", postId);
                 cmd.Parameters.AddWithValue("@comment", commentContent);
-                cmd.Parameters.AddWithValue("@userName", userName);
                 cmd.ExecuteNonQuery();
             }
         }
 
+        public class Post
+        {
+            public int PostID { get; set; }
+            public string PostContent { get; set; }
+            public List<Comment> Comments { get; set; }
+        }
+
+        public class Comment
+        {
+            public string CommentContent { get; set; }
+        }
+
         protected void btnBack_Click(object sender, EventArgs e)
         {
+            // Navigate back to the previous page
             Response.Redirect("Main Page After Logged In.aspx");
         }
     }
-
-    public class Post
-    {
-        public int PostID { get; set; }
-        public string PostContent { get; set; }
-        public string UserName { get; set; }
-        public List<Comment> Comments { get; set; }
-    }
-
-    public class Comment
-    {
-        public string CommentContent { get; set; }
-        public string UserName { get; set; }
-    }
 }
+

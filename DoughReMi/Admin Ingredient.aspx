@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Ingredients Form</title>
-    <link rel="stylesheet" type="text/css" href="Admin ingredient.css" />
+    <link rel="stylesheet" type="text/css" href="Admin Ingredient.css" />
+ 
     <style type="text/css">
         .auto-style1 {
             text-align: left;
@@ -15,30 +16,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav id="desktop-nav">  
-            <ul class="topnav">   
-                <li class="dropdown">
-                    <a href="#content-management" class="dropbutton">User Management</a>
-                    <div class="dropdown-content">
-                        <a href="Manage User.aspx">Manage User</a>
-                        <a href="Manage Admin.aspx">Manage Admin</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#content-management" class="dropbutton">Content Management</a>
-                        <div class="dropdown-content">
-                            <a href="Admin Quiz Dashboard.aspx">Manage Quiz & Assessments</a>
-                            <a href="Admin Forum.aspx">Manage Discussion Forums</a>
-                            <a href="Admin Ingredient.aspx">Manage Ingredient</a>
-                            <a href="Admin Menu Recipe.aspx">Manage Menu & Recipe</a>
-                        </div>
-                    </li>
-                <li>
-                    <br />
-                </li>
-            </ul>    
-        </nav>
-
         <div class="container">
             <h1 class="auto-style1">
                 <asp:Button ID="back" runat="server" CssClass="back-btn" OnClick="back_Click1" Text="Back" />

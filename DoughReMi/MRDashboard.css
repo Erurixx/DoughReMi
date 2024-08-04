@@ -1,39 +1,33 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+﻿
 
-html {
-    scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
     background-color: #F9F9F9;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "slnt" 0;
 }
-
-
-
-/* Dashboard Styles */
-.dashboard {
-    padding: 30px;
+    /* Dashboard Styles */
+    .dashboard {
+    padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 30px auto;
-    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
-.dashboard h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #555;
-    font-weight: 300;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
+    .dashboard h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 
 /* Centering the recipe-list */
 .recipe-list {
@@ -48,53 +42,11 @@ body {
 /* Style for each recipe item */
 .recipe-item {
     text-align: center;
-    margin-bottom: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
 }
 
-.recipe-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.recipe-item img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #eee;
-}
-
-/* Recipe details */
-.recipe-details {
-    padding: 20px;
-}
-
-.recipe-details h3 {
-    font-size: 1.75rem;
-    color: #333;
-    margin: 0 0 10px 0;
-}
-
-.recipe-details p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.5;
-}
-
-.recipe-details a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #5cb85c;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.recipe-details a:hover {
-    background-color: #4cae4c;
-}
+    /* Ensure the image fits within the container */
+    .recipe-item img {
+        max-width: 100%;
+        height: auto;
+    }

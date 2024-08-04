@@ -1,11 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserForum.aspx.cs" Inherits="DoughReMi.UserForum" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User Forum.aspx.cs" Inherits="DoughReMi.UserForum" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Discussion Forum</title>
     <link rel="stylesheet" type="text/css" href="User Profile New.css" />
     <link rel="stylesheet" type="text/css" href="User Forum.css" />
+    
 
     <style type="text/css">
         .auto-style1 {
@@ -49,18 +51,18 @@
                 <br />
             </div>
 
-            <!-- Repeater for displaying posts -->
+            <!--Repeater for displaying posts -->
             <asp:Repeater ID="RptPosts" runat="server" OnItemDataBound="RptPosts_ItemDataBound">
                 <ItemTemplate>
                     <div class="post-box">
                         <div class="post-content">
-                            <p><strong><%# Eval("UserName") %>:</strong> <%# Eval("PostContent") %></p>
+                            <p><strong>Post:</strong> <%# Eval("PostContent") %></p>
                         </div>
                         <div class="comments">
                             <asp:Repeater ID="rptComments" runat="server">
                                 <ItemTemplate>
                                     <div class="comment">
-                                        <%# Eval("UserName") %>: <%# Eval("CommentContent") %>
+                                        <%# Eval("CommentContent") %>
                                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -75,15 +77,15 @@
 
             <div class="form-group text-center">
                 <asp:Button ID="btnBack" runat="server" Text="Back to Previous Page" CssClass="btn btn-primary" OnClick="btnBack_Click" />
-            </div>
+        </div>
         </div>
 
-        <footer>
-            <div class="footer-bottom">
-                <p>&copy; 2024 DoughReMi. All rights reserved.</p>
-            </div>
-        </footer>
-
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DoughReMi. All rights reserved.</p>
+        </div>
+    </footer>
+        
     </form>
 </body>
 </html>
